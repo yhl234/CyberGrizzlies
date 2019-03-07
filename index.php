@@ -10,9 +10,9 @@
 </head>
 <body>
 <?php
-require 'connect.php';
-echo '<p>connect is good</p>';
-mysqli_close($conn); 
+	require 'connect.php';
+	echo '<p>connect is good</p>';
+	mysqli_close($conn); 
 ?>
 </body>
 </html>
