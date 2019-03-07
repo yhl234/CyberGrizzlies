@@ -2,7 +2,7 @@
 $servername = "mycgdb.mysql.database.azure.com";
 $dbusername = "cgadmin@mycgdb";
 $dbpassword = "Password!";
-$dbname = "cgadmin";
+$dbname = "mycgdb";
 
 // Create connection
 $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
