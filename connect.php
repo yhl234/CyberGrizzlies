@@ -6,7 +6,7 @@ $dbname = "mycgdb";
 
 // Create connection
 $conn=mysqli_init(); 
-mysqli_real_connect($con, "mycgdb.mysql.database.azure.com", "cgadmin@mycgdb", "Password!", "mycgdb", 3306);
+mysqli_real_connect($conn, "mycgdb.mysql.database.azure.com", "cgadmin@mycgdb", "Password!", "mycgdb", 3306);
 
 // Check connection
 if ($conn->connect_error) {
