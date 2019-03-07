@@ -12,7 +12,7 @@
 <?php
 	require 'connect.php';
 	echo '<p>connect is good</p>';
-	mysqli_close($conn); 
+	mysqli_close($conn);
 ?>
 </body>
 </html>

@@ -1,16 +1,14 @@
 <?php
-$servername = "mycgdb.mysql.database.azure.com";
-$dbusername = "cgadmin@mycgdb";
-$dbpassword = "Password!";
-$dbname = "mycgdb";
+$host = "mycgdb.mysql.database.azure.com";
+$username = "cgadmin@mycgdb";
+$password = "Password!";
+$db_name = "mycgdb";
 
-// Create connection
-$conn=mysqli_init(); 
-mysqli_real_connect($con, "mycgdb.mysql.database.azure.com", "cgadmin@mycgdb", "Password!", "mycgdb", 3306);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+//Establishes the connection
+$conn = mysqli_init();
+mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
+if (mysqli_connect_errno($conn)) {
+die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
 
