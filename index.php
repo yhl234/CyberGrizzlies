@@ -22,7 +22,9 @@
 	// die('Failed to connect to MySQL: '.mysqli_connect_error());
 	// }
 	$conn = new mysqli("mycgdb.mysql.database.azure.com", "cgadmin@mycgdb", "Password!" , "mycgdb");
-
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	} 
 	echo '<p>connect is good</p>';
 	mysqli_close($conn); 
 ?>
