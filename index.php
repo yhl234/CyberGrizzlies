@@ -21,7 +21,7 @@
 	// if (mysqli_connect_errno($conn)) {
 	// die('Failed to connect to MySQL: '.mysqli_connect_error());
 	// }
-	$conn = new mysqli("mycgdb.mysql.database.azure.com", "cgadmin@mycgdb", "Password!" , "mycgdb", 3306);
+	$conn = new mysqli("mycgdb.mysql.database.azure.com", "cgadmin@mycgdb", "Password!" , "mycgdb");
 
 	echo '<p>connect is good</p>';
 	mysqli_close($conn); 
