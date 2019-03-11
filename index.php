@@ -25,8 +25,8 @@
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	} 
-	// echo '<p>connect is good</p>';
-	// mysqli_close($conn); 
+	echo '<p>connect is good</p>';
+	mysqli_close($conn); 
 ?>
 </body>
 </html>
