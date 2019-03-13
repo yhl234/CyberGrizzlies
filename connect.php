@@ -5,11 +5,15 @@ $password = "Password!";
 $db_name = "mycgdb";
 
 //Establishes the connection
-$conn = mysqli_init();
-mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
-if (mysqli_connect_errno($conn)) {
-die('Failed to connect to MySQL: '.mysqli_connect_error());
-}
 
+try{
+	$conn = new PDO('mysql:host=mycgdb.mysql.database.azure.com;dbname=mycgdb','cgadmin@mycgdb','Password');
+	// set the PDO error mode to exception
+	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	// echo "Connected successfully";
+}
+catch(PDOException $e){
+	echo "Connection failed: " . $e->getMessage();
+}
 
 ?>
