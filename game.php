@@ -4,7 +4,8 @@
 	<table>
 		<th>ID</th>
 		<th>Name</th>
-		<th>Ground</th>
+		<th>GenreName</th>
+		<th>SingleMulti</th>
 		<th>Update</th>
 		<th>Delete</th>	
 		
@@ -37,7 +38,56 @@ $SingleMulti = $_GET['single'];
 mysqli_close($conn);
 ?>
 	</table>
-	
+<!-- update area -->
+	<form method="post" action="#">
+		<h3>update</h3>
+		<input name="id" type="hidden" value="<?php echo $GameID;?>"/>
+		<div>
+			<label for="name">Name:</label>
+			<input name="name" placeholder="<?php echo $GameName;?>" required />
+		</div>
+		<div>
+			<label for="name">Genre:</label>
+			<input name="name" placeholder="<?php echo $GenreName;?>" required />
+		</div>
+		<div>
+			<label for="ground">Single or Multi:</label>
+			<input name="ground" placeholder="<?php echo $SingleMulti;?>" required />
+		</div>
+		<div>
+			<button type="submit"> Update</button>
+		</div>
+	</form>
+<!-- add game area -->
+	<form method="post" action="#">
+		<h3>Add Game</h3>
+		<div>
+			<label for="name">New Game Name:</label>
+			<input name="name" required />
+		</div>
+		<div>
+			<label for="name">Genre:</label>
+			<input name="name" required />
+		</div>
+		<div>
+			<label for="ground">Single or Multi:</label>
+			<input name="ground" required />
+		</div>
+		<div>
+			<button type="submit"> Add</button>
+		</div>
+	</form>
+<!-- add Genre area -->
+<form method="post" action="#">
+		<h3>Add Genre</h3>
+		<div>
+			<label for="name">New Genre:</label>
+			<input name="name" required />
+		</div>
+		<div>
+			<button type="submit"> Add</button>
+		</div>
+	</form>	
 </main>
 
 
