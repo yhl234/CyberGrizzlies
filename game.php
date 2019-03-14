@@ -39,20 +39,20 @@ mysqli_close($conn);
 ?>
 	</table>
 <!-- update area -->
-	<form method="post" action="#">
+	<form method="post" action="update_game.php">
 		<h3>update</h3>
 		<input name="id" type="hidden" value="<?php echo $GameID;?>"/>
 		<div>
 			<label for="name">Name:</label>
-			<input name="name" placeholder="<?php echo $GameName;?>" required />
+			<input id="name" name="name" value="<?php echo $GameName;?>" required />
 		</div>
 		<div>
-			<label for="name">Genre:</label>
-			<input name="name" placeholder="<?php echo $GenreName;?>" required />
+			<label for="genre">Genre:</label>
+			<input id="genre" name="genre" value="<?php echo $GenreName;?>" required />
 		</div>
 		<div>
-			<label for="ground">Single or Multi:</label>
-			<input name="ground" placeholder="<?php echo $SingleMulti;?>" required />
+			<label for="single">Single or Multi:</label>
+			<input id="single" name="ground" value="<?php echo $SingleMulti;?>" required />
 		</div>
 		<div>
 			<button type="submit"> Update</button>
