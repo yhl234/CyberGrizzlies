@@ -39,53 +39,89 @@ mysqli_close($conn);
 ?>
 	</table>
 <!-- update area -->
-	<form method="post" action="update_game.php">
-		<h3>update</h3>
-		<input name="id" type="hidden" value="<?php echo $GameID;?>"/>
+	<form method="POST" action="update_game.php">
+		<h3>Update Game</h3>
+		<input name="updateId" type="hidden" value="<?php echo $GameID;?>"/>
 		<div>
-			<label for="name">Name:</label>
-			<input id="name" name="name" value="<?php echo $GameName;?>" required />
+			<label for="updateName">Name:</label>
+			<input id="updateName" name="updateName" value="<?php echo $GameName;?>" required />
 		</div>
 		<div>
-			<label for="genre">Genre:</label>
-			<input id="genre" name="genre" value="<?php echo $GenreName;?>" required />
+			<label for="updateGenre">Genre:</label>
+			<select name="updateGenre" id="updateGenre" required>
+				<option disabled selected value> -- select an option -- </option>
+
+			<?php
+			// dropdown for Genre
+				require 'connect.php';
+				$sql = "SELECT * FROM Genre";
+				$result = mysqli_query($conn, $sql);
+				while ($row = mysqli_fetch_array($result)){
+					echo 
+						'<option value="'.$row['GenreID'].'">'.$row['GenreName'].'</option>';
+				}
+				$conn = null;
+			?>
+			</select>
 		</div>
 		<div>
-			<label for="single">Single or Multi:</label>
-			<input id="single" name="ground" value="<?php echo $SingleMulti;?>" required />
+			<label for="updateMulti">Multi player?</label>
+			<select name="updateMulti" id="updateMulti">
+				<option disabled selected value> -- select an option -- </option>
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</select>
 		</div>
 		<div>
-			<button type="submit"> Update</button>
+			<button type="submit"> Update Game</button>
 		</div>
 	</form>
 <!-- add game area -->
-	<form method="post" action="#">
+	<form method="post" action="addgame_game.php">
 		<h3>Add Game</h3>
 		<div>
-			<label for="name">New Game Name:</label>
-			<input name="name" required />
+			<label for="addGameName">New Game Name:</label>
+			<input name="addGameName" required />
 		</div>
 		<div>
-			<label for="name">Genre:</label>
-			<input name="name" required />
+			<label for="addGameGenre">Genre:</label>
+			<select name="addGameGenre" id="addGameGenre" required>
+				<option disabled selected value> -- select an option -- </option>
+			<?php
+			// dropdown for Genre
+				require 'connect.php';
+				$sql = "SELECT * FROM Genre";
+				$result = mysqli_query($conn, $sql);
+				while ($row = mysqli_fetch_array($result)){
+					echo 
+						'<option value="'.$row['GenreID'].'">'.$row['GenreName'].'</option>';
+				}
+				$conn = null;
+			?>
+						</select>
 		</div>
 		<div>
-			<label for="ground">Single or Multi:</label>
-			<input name="ground" required />
+			<label for="addGameMulti">Multi player?</label>
+			<select name="addGameMulti" id="addGameMulti">
+				<option disabled selected value> -- select an option -- </option>
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</select>
+			
 		</div>
 		<div>
-			<button type="submit"> Add</button>
+			<button type="submit"> Add New Game</button>
 		</div>
 	</form>
 <!-- add Genre area -->
-<form method="post" action="#">
+<form method="post" action="addgenre_game.php">
 		<h3>Add Genre</h3>
 		<div>
-			<label for="name">New Genre:</label>
-			<input name="name" required />
+			<label for="addGenreName">New Genre:</label>
+			<input name="addGenreName" required />
 		</div>
 		<div>
-			<button type="submit"> Add</button>
+			<button type="submit"> Add New Genre</button>
 		</div>
 	</form>	
 </main>
