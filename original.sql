@@ -331,60 +331,59 @@ VALUES
 #---FILL PLAYERS TABLE---#
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (1, 1, HappyPenguin, 1, 1, 2, 1);
+VALUES (1, 1, 'HappyPenguin', 1, 1, 2, 1);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (2, 2, PurplePeopleEater, 5, 3, 2, 3);
+VALUES (2, 2, 'PurplePeopleEater', 5, 3, 2, 3);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (3, 3, EpicGamer, 3, 2, 2, 2);
+VALUES (3, 3, 'EpicGamer', 3, 2, 2, 2);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (4, 4, //Ninja//, 3, 4, 3, 2);
+VALUES (4, 4, '//Ninja//', 3, 4, 3, 2);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (5, 5, -=DarkEagle=-, 6, 3, 3, 1);
+VALUES (5, 5, '-=DarkEagle=-', 6, 3, 3, 1);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (6, 6, RDBsucks, 2, 3, 1, 3);
+VALUES (6, 6, 'RDBsucks', 2, 3, 1, 3);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (7, 7, H4rdC0re, 2, 1, 3, 3);
+VALUES (7, 7, 'H4rdC0re', 2, 1, 3, 3);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (8, 8, GitGudScrub, 3, 2, 2, 1);
+VALUES (8, 8, 'GitGudScrub', 3, 2, 2, 1);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (9, 9, NotYourFriend, 8, 4, 3, 1);
+VALUES (9, 9, 'NotYourFriend', 8, 4, 3, 1);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (11, 4, ProfficientInL33t, 2, 1, 2, 2);
+VALUES (11, 4, 'ProfficientInL33t', 2, 1, 2, 2);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (12, 4, 3L1t3H4x0rZ, 1, 4, 1, 1);
+VALUES (12, 4, '3L1t3H4x0rZ', 1, 4, 1, 1);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (13, 7, AnimeHater32, 6, 3, 2, 3);
+VALUES (13, 7, 'AnimeHater32', 6, 3, 2, 3);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (14, 2, HakuneAtchoo, 9, 1, 3, 3);
+VALUES (14, 2, 'HakuneAtchoo', 9, 1, 3, 3);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (15, 8, TheOG, 7, 2, 3, 1);
+VALUES (15, 8, 'TheOG', 7, 2, 3, 1);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (16, 8, JimSucks001, 9, 4, 1, 2);
+VALUES (16, 8, 'JimSucks001', 9, 4, 1, 2);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (17, 8, 2Kewl4Skewl, 1, 3, 2, 2);
+VALUES (17, 8, '2Kewl4Skewl', 1, 3, 2, 2);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (18, 1, MisterDude, 4, 3, 3, 1);
+VALUES (18, 1, 'MisterDude', 4, 3, 3, 1);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (19, 3, N00bPwner, 6, 3, 1, 1);
+VALUES (19, 3, 'N00bPwner', 6, 3, 1, 1);
 
 INSERT INTO Players (PlayerID, UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
-VALUES (20, 6, Darkness420, 5, 4, 2, 3);
-
+VALUES (20, 6, 'Darkness420', 5, 4, 2, 3);
 
