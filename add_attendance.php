@@ -47,6 +47,12 @@ require 'header.php';
 			$errormsg = "Please enter a unique new status under 12 characters in length.";
 		}
 	}
+	$statusnamesSql = "SELECT statusname FROM status WHERE statusname = '" . $newStatus . "';";
+	if (mysqli_query($conn, $statusnamesSql)->num_rows > 0)
+	{
+		$ok = false;
+		$errormsg = "New status already exists! Please select it from the dropdown.";
+	}
 	if (empty($platformId)) {
 		$ok = false;
 		$errormsg = "Please select a gaming platform.";
@@ -59,7 +65,6 @@ require 'header.php';
 		if ($addNewStatus)
 		{
 			$statusSql = "INSERT INTO status (statusname) VALUES ('" . $newStatus . "');";
-			echo $statusSql;
 			if (mysqli_query($conn, $statusSql)) {
 				//Confirm with the user
 				echo '<p>Status created successfully.</p>';

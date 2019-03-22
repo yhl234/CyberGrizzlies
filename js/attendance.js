@@ -1,8 +1,10 @@
 var sForm = document.getElementById("statusSubForm");
 var statusCB = document.getElementById("statusId");
+UpdateCB();
 
+statusCB.onchange = UpdateCB;
 
-statusCB.onchange = function () {
+function UpdateCB () {
 	if (statusCB.value == -1)
 	{
 		sForm.className = "";
@@ -13,4 +15,4 @@ statusCB.onchange = function () {
 		sForm.className = "hidden";
 		console.log("status subform hidden");
 	}
-};
+}
