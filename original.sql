@@ -106,13 +106,12 @@ CREATE TABLE Attendees (
   UserID int(8) unsigned NOT NULL,
   EventID int(8) unsigned NOT NULL,
   StatusID int(8) unsigned NOT NULL,
-  LocationID int(8) unsigned NOT NULL,
+  IsRemote int(1) unsigned NOT NULL,
   PlatformID int(8) unsigned NOT NULL,
   PRIMARY KEY (AttendeeID),
 CONSTRAINT FOREIGN KEY (UserID) REFERENCES Users (UserID),
 CONSTRAINT FOREIGN KEY (EventID) REFERENCES Events (EventID),
 CONSTRAINT FOREIGN KEY (StatusID) REFERENCES Status (StatusID),
-CONSTRAINT FOREIGN KEY (LocationID) REFERENCES Locations (LocationID),
 CONSTRAINT FOREIGN KEY (PlatformID) REFERENCES GamePlatform (PlatformID)
 );
 
@@ -314,18 +313,18 @@ VALUES
 
 #---FILL ATTENDEES TABLE---#
 
-INSERT INTO Attendees (AttendeeID, UserID, EventID, StatusID,  LocationID, PlatformID) 
+INSERT INTO Attendees (AttendeeID, UserID, EventID, StatusID, IsRemote, PlatformID) 
 VALUES 
-(1, 1, 1, 3, 1, 6),
-(2, 4, 1, 4, 1, 6),
-(3, 3, 6, 1, 1, 4),
+(1, 1, 1, 3, 0, 6),
+(2, 4, 1, 4, 0, 6),
+(3, 3, 6, 1, 0, 4),
 (4, 1, 3, 1, 1, 5),
-(5, 8, 5, 3, 2, 2),
+(5, 8, 5, 3, 0, 2),
 (6, 10, 3, 1, 1, 5),
-(7, 9, 6, 2, 1, 4),
-(8, 2, 4, 4, 3, 6),
-(9, 7, 8, 3, 2, 1),
-(10, 10, 9, 1, 2, 5);
+(7, 9, 6, 2, 0, 4),
+(8, 2, 4, 4, 0, 6),
+(9, 7, 8, 3, 0, 1),
+(10, 10, 9, 1, 1, 5);
 
 
 #---FILL PLAYERS TABLE---#
