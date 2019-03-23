@@ -23,7 +23,7 @@ echo '<select>';
 while ($row = mysqli_fetch_array($result)){
 	echo '
 	
-		<option value="volvo">'.$row.'</option>
+		<option value="">'.$row.'</option>
   ';
 }
 echo '</select>';
@@ -53,7 +53,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['FirstName'].'</td>'.
 	'<td>' .$row['LastName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['UserID'] .'&table=User">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['UserID'] .'&table=User">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['UserID'] .'&name='.$row['UserID'].'&genre='.$row['UserID'].'&single='.$row['UserID'].'">Edit</a></td>'.
 	//delete
@@ -90,7 +90,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['LastName'].'</td>'.
 	'<td>' .$row['GamerTag'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['PlayerID'] .'&table=Player">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['PlayerID'] .'&table=Player">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['PlayerID'] .'&name='.$row['PlayerID'].'&genre='.$row['PlayerID'].'&single='.$row['PlayerID'].'">Edit</a></td>'.
 	//delete
@@ -121,7 +121,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<tr>'.
 	'<td>' .$row['StatusName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['StatusID'] .'&table=Status">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['StatusID'] .'&table=Status">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['StatusID'] .'&name='.$row['StatusID'].'&genre='.$row['StatusID'].'&single='.$row['StatusID'].'">Edit</a></td>'.
 	//delete
@@ -156,7 +156,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['StatusName'].'</td>'.
 
 	//view
-	'<td><a href="update.php?id=' . $row['AttendeeID'] .'&table=Attendee">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['AttendeeID'] .'&table=Attendee">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['AttendeeID'] .'&name='.$row['UserID'].'&genre='.$row['UserID'].'&single='.$row['UserID'].'">Edit</a></td>'.
 	//delete
@@ -190,7 +190,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['EventDateTime'].'</td>'.
 	'<td>' .$row['TypeName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['EventID'] .'&table=Event">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['EventID'] .'&table=Event">View</a></td>'.
 	'<td><a href="update.php?id=' . $row['EventID'] .'&name='.$row['UserID'].'&genre='.$row['UserID'].'&single='.$row['UserID'].'">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['EventID'] . '&table=Event"
@@ -219,7 +219,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<tr>'.
 	'<td>' .$row['TypeName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['EventTypeID'] .'&table=EventType">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['EventTypeID'] .'&table=EventType">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['EventTypeID'] .'&name='.$row['UserID'].'&genre='.$row['UserID'].'&single='.$row['UserID'].'">Edit</a></td>'.
 	//delete
@@ -251,7 +251,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['LocationName'].'</td>'.
 	'<td>' .$row['LocationAddress'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['LocationID'] .'&table=Location">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['LocationID'] .'&table=Location">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['LocationID'] .'&name='.$row['UserID'].'&genre='.$row['UserID'].'&single='.$row['UserID'].'">Edit</a></td>'.
 	//delete
@@ -284,7 +284,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['GenreName'].'</td>'.
 
 	//view
-	'<td><a href="update.php?id=' . $row['GameID'] .'&table=Game">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['GameID'] .'&table=Game">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['GameID'] .'&name='.$row['UserID'].'&genre='.$row['UserID'].'&single='.$row['UserID'].'">Edit</a></td>'.
 	//delete
@@ -314,7 +314,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<tr>'.
 	'<td>' .$row['GenreName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['GenreID'] .'&table=Genre">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['GenreID'] .'&table=Genre">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['GenreID'] .'&name='.$row['UserID'].'&genre='.$row['UserID'].'&single='.$row['UserID'].'">Edit</a></td>'.
 	//delete
@@ -344,7 +344,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<tr>'.
 	'<td>' .$row['PlatformName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['PlatformID'] .'&table=GamePlatform">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['PlatformID'] .'&table=GamePlatform">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['PlatformID'] .'&name='.$row['UserID'].'&genre='.$row['UserID'].'&single='.$row['UserID'].'">Edit</a></td>'.
 	//delete
@@ -377,7 +377,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['StreamPlatformName'].'</td>'.
 
 	//view
-	'<td><a href="update.php?id=' . $row['StreamID'] .'&table=Stream">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['StreamID'] .'&table=Stream">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['StreamID'] .'&name='.$row['UserID'].'&genre='.$row['UserID'].'&single='.$row['UserID'].'">Edit</a></td>'.
 	//delete
@@ -407,7 +407,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<tr>'.
 	'<td>' .$row['StreamPlatformName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['StreamPlatformID'] .'&table=StreamPlatform">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['StreamPlatformID'] .'&table=StreamPlatform">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['StreamPlatformID'] .'&name='.$row['UserID'].'&genre='.$row['UserID'].'&single='.$row['UserID'].'">Edit</a></td>'.
 	//delete
