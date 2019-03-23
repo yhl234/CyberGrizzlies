@@ -30,7 +30,7 @@ CREATE TABLE StreamPlatform (
 );
 
 CREATE TABLE GamePlatform (
-  PlatformID int(8) unsigned NOT NULL AUTO_INCREMENT,
+  GamePlatformID int(8) unsigned NOT NULL AUTO_INCREMENT,
   PlatformName varchar(12) NOT NULL,
   PRIMARY KEY (PlatformID)
 );
