@@ -91,9 +91,9 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['LastName'].'</td>'.
 	'<td>' .$row['GamerTag'].'</td>'.
 	//view
-	'<td><a href="update_view.php?id=' . $row['PlayerID'] .'&table=User">View</a></td>'.
+	'<td><a href="update_view.php?id=' . $row['PlayerID'] .'&table=Player">View</a></td>'.
 	//update
-	'<td><a href="update_edit.php?id=' . $row['PlayerID'].'&table=User">Edit</a></td>'.
+	'<td><a href="update_edit.php?id=' . $row['PlayerID'].'&table=Player">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['PlayerID'] .'&table=Player"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['UserName'] . '?\' );">Delete</a></td>'
@@ -159,7 +159,7 @@ while ($row = mysqli_fetch_array($result)){
 	//view
 	'<td><a href="update_view.php?id=' . $row['AttendeeID'] .'&table=Attendee">View</a></td>'.
 	//update
-	'<td><a href="update_edit.php?id=' . $row['AttendeeID'].'&table=Event">Edit</a></td>'.
+	'<td><a href="update_edit.php?id=' . $row['AttendeeID'].'&table=Attendee">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['AttendeeID'] . '&table=Attendee"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['UserName'] . '?\' );">Delete</a></td>'
