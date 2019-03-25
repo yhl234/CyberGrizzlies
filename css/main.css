@@ -9,7 +9,7 @@ body {
   "a a a a a a"
   "b b b b b b"
   "c c c c c c";
-  grid-template-rows: 200px;
+  grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-row-gap: 10px;
   grid-column-gap: 10px;
@@ -21,7 +21,9 @@ body {
 }
 header {
   grid-area: a;
-  padding: 2%;
+  padding: 3%;
+  /* height: 34%; */
+  text-align: center;
 }
 nav ul {
   display: block;
@@ -44,20 +46,25 @@ nav ul a:hover {
   color: #cf000f;
 }
 h1 {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 900;
-  font-size: 6rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 3em;
   text-transform: lowercase;
-  color: #2e3131;
+  color: #9b19b1;
   padding: 3% 3% 0% 3%;
   margin-top: -2%;
 }
 main {
   grid-area: b;
-  background-color: rgb(79, 133, 130);
+  text-align: center;
 }
 form {
-  background-color: blue;
+  background-color: #009688;
+  width: 27%;
+  margin: auto;
+}
+footer {
+  grid-area: c;
 }
 .hidden {
 	display: none;
