@@ -12,13 +12,13 @@
 
 	<!-- Start php -->
 	<?php
-		$sql = "SELECT typeid, typename FROM eventstype ORDER BY typename";
+		$sql = "SELECT eventtypeid, typename FROM eventtype ORDER BY typename";
 		$types = mysqli_query($conn, $sql);
 
 		echo '<select id="eventType" name="eventType" required>';
 
 		while ($type = mysqli_fetch_array($types)) {
-			$typeId = $type['typeid'];
+			$typeId = $type['eventtypeid'];
 			$tname = $type['typename'];
 			echo '<option value="' . $typeId . '">' . $tname . '</option>';
 		}
@@ -39,7 +39,7 @@
 
 
 		
-		$sql = "SELECT locationid, locationname FROM locations ORDER BY locationid";
+		$sql = "SELECT locationid, locationname FROM location ORDER BY locationid";
 		$locs = mysqli_query($conn, $sql);
 
 		echo '<select id="locationId" name="locationId" required>';

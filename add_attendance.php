@@ -59,8 +59,6 @@ require 'header.php';
 	}
 
 	if ($ok) {
-		echo '$ok is true';
-
 		// If they entered a new status, insert that first
 		if ($addNewStatus)
 		{
@@ -77,7 +75,7 @@ require 'header.php';
 		}
 
 
-		$attendSql = "INSERT INTO attendees (userId, eventId, statusId, isRemote, platformId) VALUES (" . $userId . ", " . $eventId . ", " . $statusId . ", " . $isRemote . ", " . $platformId . ");";
+		$attendSql = "INSERT INTO attendee (userId, eventId, statusId, isRemote, platformId) VALUES (" . $userId . ", " . $eventId . ", " . $statusId . ", " . $isRemote . ", " . $platformId . ");";
 		if (mysqli_query($conn, $attendSql)) {
 			//Confirm with the user
 			echo '<p>Attendee created successfully.</p>';
