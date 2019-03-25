@@ -44,6 +44,38 @@ header,
 footer {
   height: 10vw;;
 }
+nav ul {
+  display: block;
+  position: static; 
+  width: auto;
+  border: none;
+}
+nav li {
+  display: inline-block;
+  /* padding: 18px; */
+  background: #e4e9e8;
+  width: auto;
+}
+nav li:hover {
+  background: transparent;
+}
+
+nav li a {
+  display: block;
+  padding: 23px;
+  background: #67809f;
+  text-decoration: none;
+  color: #e4e9ed;
+  transition: all .4s ease-out;
+}
+nav li a#selected {
+  background: rgb(243, 14, 14);
+  }
+nav ul a:hover {
+  background-color: #e4e9ed;
+  transition: all .4s ease-in;
+  transform: translate(0px, -8px);
+}
 
 
 form {
