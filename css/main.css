@@ -32,7 +32,7 @@ nav ul {
   width: auto;
   border: none;
   margin-top: -3%;
-  background: #2C2F33;
+  background: #36393f;
 }
 nav li {
   display: inline-block;
@@ -60,11 +60,12 @@ nav ul a:hover {
   width: 100%;
 }
 h1 {
-  font-family: sans-serif;
-  font-weight: 500;
-  font-size: 3em;
+  font-family: serif;
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 1px;
   /* text-transform: uppercase; */
-  color: #FFFFFF;
+  color: #838383;
   padding: 3% 3% 0% 3%;
   margin-top: -2%;
 }
@@ -73,12 +74,14 @@ main {
   text-align: center;
   background: #2C2F33;
   padding: 12px 10px 92px 10px;
+  border: 1px solid #c8c8c847;
 }
 form {
-  background-color: #ffffffbf;
+  background-color: #36393f;
   width: 27%;
   margin: auto;
   padding: 4%;
+  border: 1px solid #7289da;
 }
 footer {
   grid-area: c;
