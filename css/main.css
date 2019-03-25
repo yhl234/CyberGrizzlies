@@ -1,5 +1,5 @@
 body {
-  background: #7289DA;
+  background: #23272A;
   font-size: 100%;
   max-width: 1500px;
   margin: 0 auto;
@@ -16,20 +16,22 @@ body {
   height: auto;
   margin: 4% auto;
   width: 960px;
-  box-shadow: 0px 6px 11px 4px #cccccca8;
+  /* box-shadow: 0px 6px 11px 4px #cccccca8; */
 }
 header {
   grid-area: a;
-  padding: 3%;
-  /* height: 34%; */
-  text-align: center;
+  padding: 3% auto;
+  height: 20%;
+  text-align: left;
+  /* background: #7289DA; */
 }
 nav ul {
   display: block;
   position: static;
   width: auto;
   border: none;
-  margin-top: -2%;
+  margin-top: -3%;
+  background: #2C2F33;
 }
 nav li {
   display: inline-block;
@@ -39,7 +41,7 @@ nav ul a {
   font-weight: 700;
   letter-spacing: 1px;
   text-decoration: none;
-  color: #000;
+  color: #f6f6f6;
 }
 nav ul a:hover {
   color: #cf000f;
@@ -49,13 +51,16 @@ h1 {
   font-weight: 500;
   font-size: 3em;
   text-transform: uppercase;
-  color: #9b19b1;
+  color: #FFFFFF;
   padding: 3% 3% 0% 3%;
   margin-top: -2%;
 }
 main {
   grid-area: b;
   text-align: center;
+  background: #2C2F33;
+  border-radius: 9px;
+  padding: 12px 10px 92px 10px;
 }
 form {
   background-color: #009688;

@@ -12,9 +12,9 @@
 <header>
   <nav>
     <ul>
-      <li><a href="#">create</a></li>
-      <li><a href="#">edit</a></li>
-      <li><a href="#">forms</a></li>
+      <li><a href="#">#create</a></li>
+      <li><a href="#">#edit</a></li>
+      <li><a href="#">#reports</a></li>
     </ul>
   </nav>
 </header>
