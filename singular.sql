@@ -1,118 +1,118 @@
 create database CyberGrizzlies;
-use CyberGrizzlies;
+USE CyberGrizzlies;
 
-CREATE TABLE User (
-  UserID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  UserName varchar(24) NOT NULL,
-  FirstName varchar(24) NOT NULL,
-  MiddleName varchar(24) DEFAULT NULL,
-  LastName varchar(24) NOT NULL,
-  StartDate datetime NOT NULL,
-  ActiveStatus tinyint(1) NOT NULL,
-  PayStatus tinyint(1) NOT NULL,
-  Email varchar(64) NOT NULL,
-  Phone varchar(13) NOT NULL,
-  ChatStatus tinyint(1) NOT NULL,
-  DiscordTag varchar(64) DEFAULT NULL,
+CREATE TABLE USER (
+  UserID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  UserName VARCHAR(24) NOT NULL,
+  FirstName VARCHAR(24) NOT NULL,
+  MiddleName VARCHAR(24) DEFAULT NULL,
+  LastName VARCHAR(24) NOT NULL,
+  StartDate DATETIME NOT NULL,
+  ActiveStatus TINYINT(1) NOT NULL,
+  PayStatus TINYINT(1) NOT NULL,
+  Email VARCHAR(64) NOT NULL,
+  Phone VARCHAR(13) NOT NULL,
+  ChatStatus TINYINT(1) NOT NULL,
+  DiscordTag VARCHAR(64) DEFAULT NULL,
   PRIMARY KEY (UserID)
 );
 
-CREATE TABLE Status (
-  StatusID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  StatusName varchar(12) NOT NULL,
+CREATE TABLE STATUS (
+  StatusID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  StatusName VARCHAR(12) NOT NULL,
   PRIMARY KEY (StatusID)
 );
 
 CREATE TABLE StreamPlatform (
-  StreamPlatformID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  StreamPlatformName varchar(12) NOT NULL,
+  StreamPlatformID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  StreamPlatformName VARCHAR(12) NOT NULL,
   PRIMARY KEY (StreamPlatformID)
 );
 
 CREATE TABLE GamePlatform (
-  GamePlatformID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  PlatformName varchar(12) NOT NULL,
-  PRIMARY KEY (PlatformID)
+  GamePlatformID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  PlatformName VARCHAR(12) NOT NULL,
+  PRIMARY KEY (GamePlatformID)
 );
 
 CREATE TABLE Genre (
-  GenreID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  GenreName varchar(24) NOT NULL,
+  GenreID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  GenreName VARCHAR(24) NOT NULL,
   PRIMARY KEY (GenreID)
 );
 
 CREATE TABLE EventType (
-  EventTypeID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  TypeName varchar(32) NOT NULL ,
+  EventTypeID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  TypeName VARCHAR(32) NOT NULL ,
   PRIMARY KEY (EventTypeID)
 );
 
 CREATE TABLE Location (
-  LocationID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  LocationName varchar(32) NOT NULL,
-  LocationAddress varchar(64) NOT NULL,
+  LocationID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  LocationName VARCHAR(32) NOT NULL,
+  LocationAddress VARCHAR(64) NOT NULL,
   PRIMARY KEY (LocationID)
 );
 
 CREATE TABLE Game (
-  GameID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  GameName varchar(24) NOT NULL,
-  SingleMulti tinyint(1) NOT NULL,
-  GenreID int(8) unsigned NOT NULL,
+  GameID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  GameName VARCHAR(24) NOT NULL,
+  SingleMulti TINYINT(1) NOT NULL,
+  GenreID INT(8) UNSIGNED NOT NULL,
   PRIMARY KEY (GameID),
  CONSTRAINT FOREIGN KEY (GenreID) REFERENCES Genre (GenreID)
 );
 
 CREATE TABLE Stream (
-  StreamID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  StreamLink varchar(100) NOT NULL,
-  UserID int(8) unsigned NOT NULL,
-  StreamPlatformID int(8) unsigned NOT NULL,
+  StreamID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  StreamLink VARCHAR(100) NOT NULL,
+  UserID INT(8) UNSIGNED NOT NULL,
+  StreamPlatformID INT(8) UNSIGNED NOT NULL,
   PRIMARY KEY (StreamID),
-CONSTRAINT FOREIGN KEY (UserID) REFERENCES User (UserID),
+CONSTRAINT FOREIGN KEY (UserID) REFERENCES USER (UserID),
 CONSTRAINT FOREIGN KEY (StreamPlatformID) REFERENCES StreamPlatform (StreamPlatformID)
 );
 
-CREATE TABLE Event (
-  EventID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  EventName varchar(64) NOT NULL,
-  EventTypeID int(8) unsigned NOT NULL,
-  EventDateTime datetime NOT NULL,
-  LocationID int(8) unsigned NOT NULL,
-  EventDescription varchar(256) NOT NULL,
+CREATE TABLE EVENT (
+  EventID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  EventName VARCHAR(64) NOT NULL,
+  EventTypeID INT(8) UNSIGNED NOT NULL,
+  EventDateTime DATETIME NOT NULL,
+  LocationID INT(8) UNSIGNED NOT NULL,
+  EventDescription VARCHAR(256) NOT NULL,
   PRIMARY KEY (EventID),
 CONSTRAINT FOREIGN KEY (EventTypeID) REFERENCES EventType (EventTypeID),
 CONSTRAINT FOREIGN KEY (LocationID) REFERENCES Location (LocationID)
 );
 
 CREATE TABLE Player (
-  PlayerID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  UserID int(8) unsigned NOT NULL,
-  GamerTag varchar(64) NOT NULL,
-  GameID int(8) unsigned NOT NULL,
-  StatusID int(8) unsigned NOT NULL,
-  LocationID int(8) unsigned NOT NULL,
-  PlatformID int(8) unsigned NOT NULL,
+  PlayerID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  UserID INT(8) UNSIGNED NOT NULL,
+  GamerTag VARCHAR(64) NOT NULL,
+  GameID INT(8) UNSIGNED NOT NULL,
+  StatusID INT(8) UNSIGNED NOT NULL,
+  LocationID INT(8) UNSIGNED NOT NULL,
+  PlatformID INT(8) UNSIGNED NOT NULL,
   PRIMARY KEY (PlayerID),
-CONSTRAINT FOREIGN KEY (UserID) REFERENCES User (UserID),
+CONSTRAINT FOREIGN KEY (UserID) REFERENCES USER (UserID),
 CONSTRAINT FOREIGN KEY (GameID) REFERENCES Game (GameID),
-CONSTRAINT FOREIGN KEY (StatusID) REFERENCES Status (StatusID),
+CONSTRAINT FOREIGN KEY (StatusID) REFERENCES STATUS (StatusID),
 CONSTRAINT FOREIGN KEY (LocationID) REFERENCES Location (LocationID),
-CONSTRAINT FOREIGN KEY (PlatformID) REFERENCES GamePlatform (PlatformID)
+CONSTRAINT FOREIGN KEY (PlatformID) REFERENCES GamePlatform (GamePlatformID)
 );
 
 CREATE TABLE Attendee (
-  AttendeeID int(8) unsigned NOT NULL AUTO_INCREMENT,
-  UserID int(8) unsigned NOT NULL,
-  EventID int(8) unsigned NOT NULL,
-  StatusID int(8) unsigned NOT NULL,
-  IsRemote int(1) unsigned NOT NULL,
-  PlatformID int(8) unsigned NOT NULL,
+  AttendeeID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  UserID INT(8) UNSIGNED NOT NULL,
+  EventID INT(8) UNSIGNED NOT NULL,
+  StatusID INT(8) UNSIGNED NOT NULL,
+  IsRemote INT(1) UNSIGNED NOT NULL,
+  PlatformID INT(8) UNSIGNED NOT NULL,
   PRIMARY KEY (AttendeeID),
-CONSTRAINT FOREIGN KEY (UserID) REFERENCES User (UserID),
-CONSTRAINT FOREIGN KEY (EventID) REFERENCES Event (EventID),
-CONSTRAINT FOREIGN KEY (StatusID) REFERENCES Status (StatusID),
-CONSTRAINT FOREIGN KEY (PlatformID) REFERENCES GamePlatform (PlatformID)
+CONSTRAINT FOREIGN KEY (UserID) REFERENCES USER (UserID),
+CONSTRAINT FOREIGN KEY (EventID) REFERENCES EVENT (EventID),
+CONSTRAINT FOREIGN KEY (StatusID) REFERENCES STATUS (StatusID),
+CONSTRAINT FOREIGN KEY (PlatformID) REFERENCES GamePlatform (GamePlatformID)
 );
 
 
