@@ -44,6 +44,9 @@ nav ul a {
   text-decoration: none;
   color: #f6f6f6;
 }
+nav ul a:first-letter {
+  color: red;
+}
 nav ul a:hover {
   color: #7289DA;
 }
