@@ -4,15 +4,13 @@ body {
   max-width: 1500px;
   margin: 0 auto;
   scroll-behavior: smooth;
-}
-#container {
   display: grid;
   grid-template-areas:
   "a a a a a a"
   "b b b b b b"
   "c c c c c c";
   grid-template-rows: 200px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   height: auto;
