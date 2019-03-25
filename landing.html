@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <!--  Content  -->
+    <article>
+      <h1>enter the den</h1>
+      <!--  Pop up Container -->
+      <div id="optionBox">
+          <img class="logo" src="images/logo.png" alt="grizzy logo"  width="100" height="100" />
+          <!--  Drop down 1  -->
+        <div class="dropdown">
+          <button class="dropbtn">create</button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+          <!--  Drop down 2  -->
+        <div class="dropdown">
+          <button class="dropbtn">update</button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+          <!--  Go to Link -->
+        <div class="dropdown">
+          <a href="https://www.wowhead.com/">
+            <button class="dropbtn">forms</button>
+          </a>
+        </div>
+      </div>
+    </article>
+    <!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
+    <video autoplay loop id="video-background" muted plays-inline>
+      <source src="video/video-montage-final.mp4" type="video/mp4">
+    </video>
+    <script src="js/options.js"></script>
+  </body>
+</html>
+
