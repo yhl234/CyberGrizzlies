@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $sql) or die('View Error.'.$sql);
 
 $row = mysqli_fetch_array($result);
 //for each piece of information saved in the array, display it to the user.
-echo '<form method="POST" action="update_game.php">';
+echo '<form method="POST" action="update_edit_edit.php?id=' . $id .'&table='.$table.'">';
 foreach($row as $key => $value)
 {
 	if( !is_int($key) )
