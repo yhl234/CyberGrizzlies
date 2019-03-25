@@ -6,6 +6,7 @@
 <header>
 <h1>Add an event:</h1>
 </header>
+<main>
 <form action="add_event.php" method="get">
 
 	<label for="eventName">Event title:</label>
@@ -72,7 +73,7 @@
 	//End form
 	echo '</form>';
 	// Include script to handle subform hiding
-	echo '<script src="js/event.js"></script>';
+  echo '<script src="js/event.js"></script>';
 	//End file
 	require 'footer.php';
 	?>
