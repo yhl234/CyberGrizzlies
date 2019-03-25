@@ -3,7 +3,9 @@
 	require 'header.php';
 ?>
 <!-- HTML header and form start -->
+<header>
 <h1>Add an event:</h1>
+</header>
 <form action="add_event.php" method="get">
 
 	<label for="eventName">Event title:</label>

@@ -9,4 +9,3 @@
 	<?php require 'connect.php' ?>
 </head>
 <body>
-	<main>
