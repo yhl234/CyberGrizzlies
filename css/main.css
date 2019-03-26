@@ -89,8 +89,12 @@ footer {
 footer p {
   color: #f6f6f6;
   font-size: 12px;
-  border-bottom: 1px solid #7289da;
   text-transform: uppercase;
+}
+footer hr {
+  border-bottom: 1px solid #7289da;
+  margin-top: 1%;
+  width: 10px;
 }
 .hidden {
 	display: none;
