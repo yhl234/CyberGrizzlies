@@ -122,7 +122,7 @@ footer ul a {
   text-decoration: none;
 }
 footer ul a:hover {
-  filter: contrast(50%);
+  filter: hue-rotate(90deg);
 }
 .footer-icon {
   width: 25%;
