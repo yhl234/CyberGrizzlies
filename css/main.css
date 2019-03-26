@@ -92,6 +92,19 @@ footer p {
   font-size: 12px;
   text-transform: uppercase;
 }
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa-discord {
+  background: #ff5500;
+  color: white;
+}
 footer hr {
   border-bottom: 1px solid #7289da;
   margin-top: 1%;
