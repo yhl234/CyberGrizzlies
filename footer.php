@@ -5,7 +5,7 @@
 <hr>
 <ul>
 <li><a href="wowhead.com"><img src="images/discord.svg" alt="discord icon" class="footer-icon" ></li>
-<li><a href="wowhead.com"><img src="images/twtich.svg" alt="twitch icon" class="footer-icon" ></li>
+<li><a href="wowhead.com"><img src="images/twitch.svg" alt="twitch icon" class="footer-icon" ></li>
 <li><a href="wowhead.com"><img src="images/discord.svg" alt="discord icon" class="footer-icon" ></li>
 </footer>
 </main>
