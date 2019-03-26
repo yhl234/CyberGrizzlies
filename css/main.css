@@ -85,6 +85,7 @@ form {
 }
 footer {
   grid-area: c;
+  margin-top: 1%
 }
 footer p {
   color: #f6f6f6;
@@ -94,7 +95,6 @@ footer p {
 footer hr {
   border-bottom: 1px solid #7289da;
   margin-top: 1%;
-  width: 10px;
 }
 .hidden {
 	display: none;
