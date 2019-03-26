@@ -110,13 +110,21 @@ footer ul  {
   display: block;
   position: static;
   width: auto;
+  margin-left: 6%;
 }
 footer li {
   display: inline-block;
-  padding: 20px;
+  padding: 0px;
+  margin-left: -11%;
+}
+footer ul a {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #f6f6f6;
 }
 .footer-icon {
-  width: 4%;
+  width: 25%;
 }
 footer hr {
   border-bottom: 1px solid #7289da;
