@@ -118,10 +118,11 @@ footer li {
   margin-left: -11%;
 }
 footer ul a {
-  font-weight: 700;
   letter-spacing: 1px;
   text-decoration: none;
-  color: #f6f6f6;
+}
+footer ul a:hover {
+  filter: contrast(50%);
 }
 .footer-icon {
   width: 25%;
