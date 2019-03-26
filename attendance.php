@@ -3,8 +3,10 @@
 	require 'header.php';
 ?>
 <!-- HTML header and form start -->
-<h1>Add an attendee:</h1>
+
 <form action="add_attendance.php" method="post">
+<fieldset>
+<legend>Add an attendee:</legend>
 	<label for="userId">User:</label>
 
 	<!-- Start php -->
@@ -104,12 +106,14 @@
 		echo '</select>';
 	
 		// Form submit button
-		echo '<br /><input type="submit" value="Submit" />';
+		echo '<br /><input id="button" type="submit" value="Submit" /> ';
 
 	//End form
-	echo '</form>';
+	echo '</fieldset></form>';
+
 	// Include script to handle subform hiding
 	echo '<script src="js/attendance.js"></script>';
 	//End file
 	require 'footer.php';
 	?>
+

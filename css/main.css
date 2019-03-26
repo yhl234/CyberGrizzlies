@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lakki+Reddy');
 body {
   background-image: url(../images/wallpaper.jpg);
   background-repeat: no-repeat;
@@ -25,6 +26,9 @@ header {
   padding: 3% auto;
   height: 20%;
   text-align: left;
+  font-family: 'Lakki Reddy', cursive;
+
+  font-size: 25px;
 }
 nav ul {
   display: block;
@@ -32,7 +36,7 @@ nav ul {
   width: auto;
   border: none;
   margin-top: -3%;
-  background: #36393f;
+  /* background: #36393f; */
 }
 nav li {
   display: inline-block;
@@ -59,30 +63,62 @@ nav ul a:hover {
 .border-link:hover::after {
   width: 100%;
 }
-h1 {
-  font-family: serif;
+legend {
+  font-family: 'Lakki Reddy', cursive;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 1px;
   /* text-transform: uppercase; */
   color: #838383;
   padding: 3% 3% 0% 3%;
   margin-top: -2%;
+  text-align: left;
 }
 main {
   grid-area: b;
-  text-align: center;
-  background: #2C2F33;
-  padding: 12px 10px 92px 10px;
-  border: 1px solid #c8c8c847;
+  /* text-align: center; */
+  /* background: #36393f; */
+  padding: 20px 10px 20px 10px;
+  /* border: 1px solid #c8c8c847; */
 }
 form {
-  background-color: #36393f;
-  width: 27%;
+  /* background-color: rgba(52, 73, 94, 0.5); */
+  width: 60%;
   margin: auto;
   padding: 4%;
-  border: 1px solid #7289da;
+  text-align: center;
+  /* background-image: url(../images/wallpaper.jpg); */
+  /* border: 1px solid #7289da; */
 }
+label{
+  display: block;
+  color: #f6f6f6;
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+select{
+  height: 25px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+fieldset{
+  padding: 2em;
+}
+
+/* button */
+input#button{
+  font-size: 15px;
+  margin: 0 auto;
+  border-radius: 75px;
+  transition: all 0.9s;
+  
+}
+input#button:hover{
+  box-shadow: 0 5px 10px -2px rgb(255, 136, 0);
+	transform: scale(0.8);
+}
+/* footer */
 footer {
   grid-area: c;
   margin-top: 1%
