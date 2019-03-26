@@ -123,6 +123,7 @@ footer ul a {
 }
 footer ul a:hover {
   filter: brightness(2.4);
+  transition: all .3s ease-in;
 }
 .footer-icon {
   width: 25%;
