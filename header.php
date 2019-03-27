@@ -13,8 +13,7 @@
 <header>
   <nav>
     <ul>
-      <li><a class="border-link" href="http://localhost/CyberGrizzlies/CyberGrizzlies/landing.html">#home</a></li>
-      <li><a class="border-link" href="#">#create</a></li>
+      <li><a class="border-link" href="http://localhost/CyberGrizzlies/CyberGrizzlies/landing.html">#create</a></li>
       <li><a class="border-link" href="#">#edit</a></li>
       <li><a class="border-link" href="#">#reports</a></li>
     </ul>
