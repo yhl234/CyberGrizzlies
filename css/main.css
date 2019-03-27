@@ -60,13 +60,16 @@ nav ul a:hover {
   width: 100%;
 }
 h1 {
-  font-family: serif;
-  font-weight: 300;
-  font-size: 2rem;
-  letter-spacing: 1px;
-  color: #838383;
-  padding: 3% 3% 0% 3%;
-  margin-top: -2%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 7px;
+  font-size: 18px;
+  padding: 3% 3% 2% 3%;
+  margin-top: 0%;
+  color: #a8afd9;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 13%;
 }
 main {
   grid-area: b;
