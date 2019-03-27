@@ -120,7 +120,7 @@ select {
   padding-left: 5%;
 }
 .select-selected {
-  background-color: DodgerBlue;
+  background-color: red;
 }
 ::placeholder {
   color: #a8afd9;
