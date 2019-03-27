@@ -198,7 +198,14 @@ input[type=date]::-webkit-inner-spin-button {
   border-width: thin;
 }
 /* Event Description text Area */
-textarea {width: 543px;height: 103px;padding: 5px;font-family: Tahoma, sans-serif;}
+textarea {
+  width: 543px;
+  height: 103px;
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
 
 /* Footer Styles */
 footer {
