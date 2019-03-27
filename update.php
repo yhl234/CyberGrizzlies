@@ -11,7 +11,9 @@ FROM INFORMATION_SCHEMA.TABLES
 WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA='CyberGrizzlies'";
 $result =  mysqli_query($conn, $sql) or die('Error');
 // populate drop down
-echo '<header><select id="selectedTable">';
+echo '<header>
+	<select id="selectedTable">
+			<option value="">---</option>';
 while ($row = mysqli_fetch_array($result)){
 	foreach($row as $key => $value){
 		if( !is_int($key) ){
