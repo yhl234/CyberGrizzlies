@@ -102,6 +102,9 @@ select {
   height: 137%;
   padding-left: 5%;
 }
+::placeholder {
+  color: #7289da;
+}
 
 /* Footer Styles */
 footer {
