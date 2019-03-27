@@ -104,8 +104,7 @@ select {
   padding-left: 5%;
 }
 ::placeholder {
-  color: #7289da;
-  text-transform: uppercase;
+  color: #a8afd9;
 }
 
 /* Footer Styles */
