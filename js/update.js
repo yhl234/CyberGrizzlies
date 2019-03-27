@@ -1,5 +1,5 @@
 var selected = document.querySelector('select');
-var view = document.querySelector('main')
+var view = document.querySelector('aside')
 var tables = ['Player', 'Status', 'Attendee', 'Event', 'EventType', 'Location', 'Game', 'Genre', 'GamePlatform', 'Stream', 'StreamPlatform', 'User'];
 
 function showTable(){
@@ -26,6 +26,7 @@ selected.addEventListener('change', function () {
 	//save value from selected
 	localStorage.setItem('selected',this.value);
 	showTable();
+	cleaner();
 	
 });
 

@@ -27,6 +27,7 @@ mysqli_close($conn);
 
 </header>
 <main>
+<article>
 <?php
 //user table
 echo '
@@ -54,9 +55,9 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['FirstName'].'</td>'.
 	'<td>' .$row['LastName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['UserID'] .'&table=User">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['UserID'] .'&table=User&mode=view">View</a></td>'.
 	//update
-	'<td><a href="update.php?id=' . $row['UserID'] .'&table=User">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['UserID'] .'&table=User&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['UserID'] .'&table=User"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['UserName'] . '?\' );">Delete</a></td>'
@@ -92,9 +93,9 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['LastName'].'</td>'.
 	'<td>' .$row['GamerTag'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['PlayerID'] .'&table=Player">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['PlayerID'] .'&table=Player&mode=view">View</a></td>'.
 	//update
-	'<td><a href="update.php?id=' . $row['PlayerID'].'&table=Player">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['PlayerID'].'&table=Player&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['PlayerID'] .'&table=Player"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['UserName'] . '?\' );">Delete</a></td>'
@@ -124,9 +125,9 @@ while ($row = mysqli_fetch_array($result)){
 	'<tr>'.
 	'<td>' .$row['StatusName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['StatusID'] .'&table=Status">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['StatusID'] .'&table=Status&mode=view">View</a></td>'.
 	//update
-	'<td><a href="update.php?id=' . $row['StatusID'].'&table=Status">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['StatusID'].'&table=Status&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['StatusID'] . '&table=Status"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['StatusName'] . '?\' );">Delete</a></td>'
@@ -160,9 +161,9 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['StatusName'].'</td>'.
 
 	//view
-	'<td><a href="update.php?id=' . $row['AttendeeID'] .'&table=Attendee">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['AttendeeID'] .'&table=Attendee&mode=view">View</a></td>'.
 	//update
-	'<td><a href="update.php?id=' . $row['AttendeeID'].'&table=Attendee">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['AttendeeID'].'&table=Attendee&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['AttendeeID'] . '&table=Attendee"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['UserName'] . '?\' );">Delete</a></td>'
@@ -195,8 +196,8 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['EventDateTime'].'</td>'.
 	'<td>' .$row['TypeName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['EventID'] .'&table=Event">View</a></td>'.
-	'<td><a href="update.php?id=' . $row['EventID'] .'&table=Event">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['EventID'] .'&table=Event&mode=view">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['EventID'] .'&table=Event&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['EventID'] . '&table=Event"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['EventName'] . '?\' );">Delete</a></td>'
@@ -225,9 +226,9 @@ while ($row = mysqli_fetch_array($result)){
 	'<tr>'.
 	'<td>' .$row['TypeName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['EventTypeID'] .'&table=EventType">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['EventTypeID'] .'&table=EventType&mode=view">View</a></td>'.
 	//update
-	'<td><a href="update.php?id=' . $row['EventTypeID'] .'&table=EventType">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['EventTypeID'] .'&table=EventType&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['EventTypeID'] . '&table=EventType"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['TypeName'] . '?\' );">Delete</a></td>'
@@ -258,9 +259,9 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['LocationName'].'</td>'.
 	'<td>' .$row['LocationAddress'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['LocationID'] .'&table=Location">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['LocationID'] .'&table=Location&mode=view">View</a></td>'.
 	//update
-	'<td><a href="update.php?id=' . $row['LocationID']  .'&table=Location">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['LocationID']  .'&table=Location&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['LocationID'] . '&table=Location"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['LocationName'] . '?\' );">Delete</a></td>'
@@ -292,9 +293,9 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['GenreName'].'</td>'.
 
 	//view
-	'<td><a href="update.php?id=' . $row['GameID'] .'&table=Game">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['GameID'] .'&table=Game&mode=view">View</a></td>'.
 	//update
-	'<td><a href="update.php?id=' . $row['GameID'] .'&table=Game">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['GameID'] .'&table=Game&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['GameID'] . '&table=Game"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['GameName'] . '?\' );">Delete</a></td>'
@@ -325,7 +326,7 @@ while ($row = mysqli_fetch_array($result)){
 	//view
 	'<td><a href="update.php?id=' . $row['GenreID'] .'&table=Genre">View</a></td>'.
 	//update
-	'<td><a href="update.php?id=' . $row['GenreID'].'&table=Genre">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['GenreID'].'&table=Genre&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['GenreID'] . '&table=Genre"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['GenreName'] . '?\' );">Delete</a></td>'
@@ -354,9 +355,9 @@ while ($row = mysqli_fetch_array($result)){
 	'<tr>'.
 	'<td>' .$row['PlatformName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['GamePlatformID'] .'&table=GamePlatform">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['GamePlatformID'] .'&table=GamePlatform&mode=view">View</a></td>'.
 	//update
-	'<td><a href="update.php?id=' . $row['GamePlatformID'] .'&table=GamePlatform">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['GamePlatformID'] .'&table=GamePlatform&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['GamePlatformID'] . '&table=GamePlatform"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['PlatformName'] . '?\' );">Delete</a></td>'
@@ -388,9 +389,9 @@ while ($row = mysqli_fetch_array($result)){
 	'<td>' .$row['StreamPlatformName'].'</td>'.
 
 	//view
-	'<td><a href="update.php?id=' . $row['StreamID'] .'&table=Stream">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['StreamID'] .'&table=Stream&mode=view">View</a></td>'.
 	//update
-	'<td><a href="update.php?id=' . $row['StreamID'] .'&table=Stream">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['StreamID'] .'&table=Stream&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['StreamID'] . '&table=Stream"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['UserName'] . '?\' );">Delete</a></td>'
@@ -419,9 +420,9 @@ while ($row = mysqli_fetch_array($result)){
 	'<tr>'.
 	'<td>' .$row['StreamPlatformName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['StreamPlatformID'] .'&table=StreamPlatform">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['StreamPlatformID'] .'&table=StreamPlatform&mode=view">View</a></td>'.
 	//update
-	'<td><a href="update.php?id=' . $row['StreamPlatformID'].'&table=StreamPlatform">Edit</a></td>'.
+	'<td><a href="update.php?id=' . $row['StreamPlatformID'].'&table=StreamPlatform&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['StreamPlatformID'] . '&table=StreamPlatform"
 	onclick="return confirm(\'Are you sure you want to delete ' . $row['StreamPlatformName'] . '?\' );">Delete</a></td>'
@@ -431,84 +432,87 @@ while ($row = mysqli_fetch_array($result)){
 echo '</table></div></div>';
 mysqli_close($conn);
 ?>
+</article>
 
-
+<aside>
 <?php
 //view -------------------------------------------------------------
 require 'connect.php';
 $table = $_GET['table'];
 $id = $_GET['id'];
 $idString = "ID";
+$mode = $_GET['mode'];
 $tableID = $table .$idString;
 $sql = "SELECT * FROM $table WHERE $tableID = $id";
 $result = mysqli_query($conn, $sql) or die();
-
-
 $row = mysqli_fetch_array($result);
-echo '<div class = "view '. $table.'"><a class="cancel" href="update.php"><i class="fas fa-times"></i></a><h3>View'.$table.'</h3><table>';
-//for each piece of information saved in the array, display it to the user.
-foreach($row as $key => $value)
-{
-	if( !is_int($key) )
+
+if ($mode == 'view'){
+	echo '<div class = "view '. $table.'"><a class="cancel" href="update.php"><i class="fas fa-times"></i></a><h3>View'.$table.'</h3><table>';
+	//for each piece of information saved in the array, display it to the user.
+	foreach($row as $key => $value)
 	{
-		if ($key == $tableID){
-			continue;
-		}else{
-			echo '<tr>'.'<td>'.$key.' </td><td> '.$value.'</td></tr>';
+		if( !is_int($key) ){
+			if ($key == $tableID){
+				continue;
+			}else{
+				echo '<tr>'.'<td>'.$key.' </td><td> '.$value.'</td></tr>';
+			}
 		}
 	}
+	echo 
+	'<tr><td><a href="update.php?id=' . $id.'&table='.$table.'&mode=edit">Edit</a></td>'.
+	'<td><a href="update_delete.php?id=' . $id .'&table='.$table.'"
+	onclick="return confirm(\'Are you sure you want to delete ' . $row['UserName'] . '?\' );">Delete</a></td>
+	</table></div>';
+
+	mysqli_close($conn);
+} else{
+	echo '<div class="view edit"><a class="cancel" href="update.php"><i class="fas fa-times"></i></a><h3>Edit'.$table.'</h3><form method="POST" action="update_edit_edit.php?id=' . $id .'&table='.$table.'">';
+	foreach($row as $key => $value)
+	{
+		if( !is_int($key) ){
+			if ($key == $tableID){
+				continue;
+			}else{
+			echo '
+			<div>
+				<label for="'.$key.'">'.$key.':</label>
+				<input id="'.$key.'" name="'.$key.'" value="'.$value.'" required />
+			</div>
+			';
+			}
+		}
+	}
+	echo 
+	'<div>
+	<button type="submit"> Save </button>
+	</div></div>
+	</form>';
+	//id edit
+
+
+	mysqli_close($conn);
 }
-echo 
-'<tr><td><a href="update.php?id=' . $row['UserID'] .'&name='.$row['UserID'].'&genre='.$row['UserID'].'&single='.$row['UserID'].'">Edit</a></td>'.
-'<td><a href="update_delete.php?id=' . $id .'&table='.$table.'"
-onclick="return confirm(\'Are you sure you want to delete ' . $row['UserName'] . '?\' );">Delete</a></td>
-</table></div>';
-
-
-mysqli_close($conn);
 ?>
 
 <?php
 //edit -------------------------------------------------------------
-require 'connect.php';
-$table = $_GET['table'];
-$id = $_GET['id'];
-$idString = "ID";
-$tableID = $table .$idString;
-$sql = "SELECT * FROM $table WHERE $tableID = $id";
-$result = mysqli_query($conn, $sql) or die('View Error.'.$sql);
+// require 'connect.php';
+// $table = $_GET['table'];
+// $id = $_GET['id'];
+// $idString = "ID";
+// $tableID = $table .$idString;
+// $sql = "SELECT * FROM $table WHERE $tableID = $id";
+// $result = mysqli_query($conn, $sql) or die('View Error.'.$sql);
 
 
-$row = mysqli_fetch_array($result);
-//for each piece of information saved in the array, display it to the user.
-echo '<div class="view edit"><a class="cancel" href="update.php"><i class="fas fa-times"></i></a><h3>Edit'.$table.'</h3><form method="POST" action="update_edit_edit.php?id=' . $id .'&table='.$table.'">';
-foreach($row as $key => $value)
-{
-	if( !is_int($key) )
-	{
-		if ($key == $tableID){
-			continue;
-		}else{
-		echo '
-		<div>
-			<label for="'.$key.'">'.$key.':</label>
-			<input id="'.$key.'" name="'.$key.'" value="'.$value.'" required />
-		</div>
-		';
-		}
-	}
-}
-echo 
-'<div>
-<button type="submit"> Save </button>
-</div></div>
-</form>';
-//id edit
+// $row = mysqli_fetch_array($result);
+// //for each piece of information saved in the array, display it to the user.
 
-
-mysqli_close($conn);
 
 ?>
-
+</aside>
 </main>
+
 <?php require 'footer.php'?>

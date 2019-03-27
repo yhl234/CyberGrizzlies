@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 }
 
-main>div>div{
+article>div>div{
 	display: none;
 }
 main{
