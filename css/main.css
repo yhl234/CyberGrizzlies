@@ -157,6 +157,11 @@ input[type=date] {
   width: 101%;
   border-bottom: 1px solid #c8c8c847;
 }
+::-webkit-clear-button
+{
+    display: none; /* Hide the button */
+    -webkit-appearance: none; /* turn off default browser styling */
+}
 /* Footer Styles */
 footer {
   grid-area: c;
