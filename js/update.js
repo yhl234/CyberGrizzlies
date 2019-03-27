@@ -23,6 +23,16 @@ function cleaner(){
 }
 
 selected.addEventListener('change', function () {
+	//save value from selected
+	localStorage.setItem('selected',this.value);
 	showTable();
+	
 });
 
+window.addEventListener('load',function(){
+	var val = localStorage.getItem('selected');
+	if (val){
+		selected.value = val;
+		showTable();
+	}
+})
