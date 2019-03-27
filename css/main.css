@@ -134,6 +134,7 @@ select option {
   background-color: #36393f;
 }
 ::placeholder {
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
   text-align: left;
