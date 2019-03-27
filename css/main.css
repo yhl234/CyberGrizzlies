@@ -98,7 +98,7 @@ input[type=text] {
   color: white;
 }
 input:focus {
-  display: none;
+  border:none;
 }
 select {
   outline: none;
