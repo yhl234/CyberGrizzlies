@@ -28,7 +28,7 @@
 		
 		echo '
 		<div id="typeSubForm" class="hidden">
-			<label for="newType"></label>
+			<label for="newType">New Type</label>
 			<input type="text" name="newType" id="newType" />
 		</div>';
 
