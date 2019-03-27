@@ -8,7 +8,7 @@
 
 	<label for="eventName"></label>
 	<input type="text" id="eventName" placeholder="Event Title" name="eventName" />
-	<br /><label for="eventType" autofocus="autofocus">Event type:</label>
+	<br /><label for="eventType" autofocus="">Event type:</label>
 
 	<!-- Start php -->
 	<?php
