@@ -6,8 +6,8 @@
 <h1>create event</h1>
 <form action="add_event.php" method="get">
 
-	<label for="eventName">Event title:</label>
-	<input type="text" id="eventName" placeholder="new event" name="eventName" />
+	<label for="eventName"></label>
+	<input type="text" id="eventName" placeholder="event title" name="eventName" />
 	<br /><label for="eventType">Event type:</label>
 
 	<!-- Start php -->
