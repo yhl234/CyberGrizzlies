@@ -7,7 +7,7 @@
 <form action="add_event.php" method="get">
 
 	<label for="eventName"></label>
-	<input type="text" id="eventName" placeholder="event title" name="eventName" />
+	<input type="text" id="eventName" placeholder="Event Title" name="eventName" />
 	<br /><label for="eventType">Event type:</label>
 
 	<!-- Start php -->
