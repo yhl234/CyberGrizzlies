@@ -28,8 +28,8 @@
 		
 		echo '
 		<div id="typeSubForm" class="hidden">
-			<label for="newType">New event type:</label>
-			<input type="text" name="newType" id="newType" />
+			<label for="newType"></label>
+			<input type="text" placeholder="Event Type" name="newType" id="newType" />
 		</div>';
 
 		echo '<br /><label for="eventDate">Event date:</label>';
