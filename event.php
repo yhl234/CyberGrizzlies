@@ -7,8 +7,8 @@
 <form action="add_event.php" method="get">
 
 	<label for="eventName"></label>
-	<input type="text" id="eventName" placeholder="Event Title" name="eventName" />
-	<br /><label for="eventType" autofocus="">Event type:</label>
+	<input type="text" autofocus id="eventName" placeholder="Event Title" name="eventName" />
+	<br /><label for="eventType">Event type:</label>
 
 	<!-- Start php -->
 	<?php
