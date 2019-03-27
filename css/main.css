@@ -109,6 +109,7 @@ input[type=text] {
   margin: 7px 0;
   background: transparent;
   color: white;
+  width: 236px;
 }
 input:focus {
   outline: none;
@@ -127,7 +128,7 @@ select {
   letter-spacing: 2px;
   text-align: left;
   font-size: 16px;
-  width: 101%;
+  width: 255px;
   border-bottom: 1px solid #c8c8c847;
 }
 select option {
@@ -156,7 +157,7 @@ input[type=date] {
   letter-spacing: 2px;
   text-align: left;
   font-size: 16px;
-  width: 101%;
+  width: 247px;
   border-bottom: 1px solid #c8c8c847;
 }
 input[type=time] {
@@ -171,6 +172,7 @@ input[type=time] {
   margin: 7px 0;
   background: transparent;
   color: white;
+  width: 236px;
 }
 ::-webkit-clear-button
 {
