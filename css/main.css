@@ -105,6 +105,7 @@ select {
 }
 ::placeholder {
   color: #7289da;
+  text-transform: uppercase;
 }
 
 /* Footer Styles */
