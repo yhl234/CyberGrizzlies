@@ -119,6 +119,9 @@ select {
   height: 137%;
   padding-left: 5%;
 }
+.select-selected {
+  background-color: DodgerBlue;
+}
 ::placeholder {
   color: #a8afd9;
 }
