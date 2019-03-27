@@ -159,6 +159,19 @@ input[type=date] {
   width: 101%;
   border-bottom: 1px solid #c8c8c847;
 }
+input[type=time] {
+  border: transparent;
+  border-bottom: 1px solid #c8c8c847;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: left;
+  font-size: 16px;
+  padding: 9px 7px;
+  margin: 7px 0;
+  background: transparent;
+  color: white;
+}
 ::-webkit-clear-button
 {
     display: none; /* Hide the button */
@@ -176,6 +189,7 @@ input[type=date]::-webkit-inner-spin-button {
   height: 6px;
   border-width: thin;
 }
+
 /* Footer Styles */
 footer {
   grid-area: c;
