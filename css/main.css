@@ -193,8 +193,10 @@ input[type=date]::-webkit-inner-spin-button {
   border-width: thin;
 }
 textarea {
-  width: 300px;
-  height: 150px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 16px;
 }
 
 /* Footer Styles */
