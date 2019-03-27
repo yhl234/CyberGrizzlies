@@ -162,6 +162,10 @@ input[type=date] {
     display: none; /* Hide the button */
     -webkit-appearance: none; /* turn off default browser styling */
 }
+input[type=date]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  display: none;
+}
 /* Footer Styles */
 footer {
   grid-area: c;
