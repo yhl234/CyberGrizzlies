@@ -8,7 +8,7 @@
 
 	<label for="eventName"></label>
 	<input type="text" autofocus id="eventName" placeholder="Event Title" name="eventName" />
-	<br /><label for="eventType">Event type:</label>
+	<br /><label for="eventType">Event Type</label>
 
 	<!-- Start php -->
 	<?php
@@ -29,7 +29,7 @@
 		echo '
 		<div id="typeSubForm" class="hidden">
 			<label for="newType"></label>
-			<input type="text" placeholder="Event Type" name="newType" id="newType" />
+			<input type="text" name="newType" id="newType" />
 		</div>';
 
 		echo '<br /><label for="eventDate">Event date:</label>';
