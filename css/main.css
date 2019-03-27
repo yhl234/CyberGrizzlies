@@ -204,8 +204,12 @@ textarea {
   padding: 5px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   resize: none;
+  background: #32353a;
+  border: 1px solid #c8c8c847;
+  color: #fff;
+  outline: none;
 }
 
 /* Footer Styles */
