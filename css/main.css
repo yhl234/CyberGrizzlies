@@ -121,7 +121,6 @@ select {
   text-align: left;
   color: #fff;
   background-color: transparent;
-  /* -webkit-appearance: none; */
   padding: 9px 7px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -131,8 +130,8 @@ select {
   width: 101%;
   border-bottom: 1px solid #c8c8c847;
 }
-.select-selected {
-  background-color: DodgerBlue;
+select option {
+  background-color: red;
 }
 ::placeholder {
   font-weight: 300;
