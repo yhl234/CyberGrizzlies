@@ -64,7 +64,6 @@ h1 {
   font-weight: 300;
   font-size: 2rem;
   letter-spacing: 1px;
-  /* text-transform: uppercase; */
   color: #838383;
   padding: 3% 3% 0% 3%;
   margin-top: -2%;
@@ -76,13 +75,35 @@ main {
   padding: 12px 10px 92px 10px;
   border: 1px solid #c8c8c847;
 }
+/* Form Styles */
 form {
   background-color: #36393f;
   width: 27%;
   margin: auto;
   padding: 4%;
   border: 1px solid #7289da;
+  display: inline-grid;
 }
+input[type=text] {
+  border: transparent;
+  border-bottom: 1px solid #c8c8c847;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  font-size: 16px;
+  padding: 9px 7px;
+  margin: 7px 0;
+  background: transparent;
+
+}
+select {
+  outline: none;
+  border: none;
+  height: 137%;
+  padding-left: 5%;
+}
+
+/* Footer Styles */
 footer {
   grid-area: c;
   margin-top: 1%
@@ -92,6 +113,7 @@ footer p {
   font-size: 12px;
   text-transform: uppercase;
 }
+/* Footer Soical Icons */
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -135,29 +157,3 @@ footer hr {
 .hidden {
 	display: none;
 }
-input {
-	outline: none;
-	border: none;
-}
-
-textarea {
-  outline: none;
-  border: none;
-}
-
-textarea:focus, input:focus {
-  border-color: transparent;
-}
-
-input:focus::-webkit-input-placeholder { 
-  color:transparent; 
-}
-textarea:focus::-webkit-input-placeholder {
-   color:transparent; 
-}
-input::-webkit-input-placeholder { 
-  color: #999999; 
-}
-textarea::-webkit-input-placeholder {
-   color: #999999; 
-  }
