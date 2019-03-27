@@ -146,7 +146,18 @@ textarea {
 }
 
 textarea:focus, input:focus {
-  border-color: transparent !important;
+  border-color: transparent;
 }
 
-input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus::-webkit-input-placeholder { 
+  color:transparent; 
+}
+textarea:focus::-webkit-input-placeholder {
+   color:transparent; 
+}
+input::-webkit-input-placeholder { 
+  color: #999999; 
+}
+textarea::-webkit-input-placeholder {
+   color: #999999; 
+  }
