@@ -6,7 +6,7 @@ function showTable(){
 	//get value from input
 	var tableID = selected.value.toString();
 	//use that value to query
-	for ( var i = 0; i < 12; i++){
+	for ( var i = 0; i < tables.length; i++){
 		var hided = document.getElementById(tables[i]);
 		var display = document.getElementById(tableID);
 		if (tableID == tables[i]){
