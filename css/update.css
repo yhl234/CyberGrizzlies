@@ -1,0 +1,21 @@
+*{
+	box-sizing: border-box;
+}
+
+main>div>div{
+	display: none;
+}
+main{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.view{
+	border: 1px black solid;
+	position: relative;
+}
+.cancel{
+	position: absolute;
+	right: 0;
+	text-decoration: none;
+}

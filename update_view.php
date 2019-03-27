@@ -16,7 +16,11 @@ foreach($row as $key => $value)
 {
 	if( !is_int($key) )
 	{
-		echo $key.' | '.$value.'<br />';
+		if ($key == $tableID){
+			continue;
+		}else{
+			echo $key.' | '.$value.'<br />';
+		}
 	}
 }
 echo 

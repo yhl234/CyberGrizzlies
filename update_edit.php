@@ -17,12 +17,16 @@ foreach($row as $key => $value)
 {
 	if( !is_int($key) )
 	{
+		if ($key == $tableID){
+			continue;
+		}else{
 		echo '
 		<div>
 			<label for="'.$key.'">'.$key.':</label>
 			<input id="'.$key.'" name="'.$key.'" value="'.$value.'" required />
 		</div>
 		';
+		}
 	}
 }
 echo 
