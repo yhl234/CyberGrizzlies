@@ -324,7 +324,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<tr>'.
 	'<td>' .$row['GenreName'].'</td>'.
 	//view
-	'<td><a href="update.php?id=' . $row['GenreID'] .'&table=Genre">View</a></td>'.
+	'<td><a href="update.php?id=' . $row['GenreID'] .'&table=Genre&mode=view">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['GenreID'].'&table=Genre&mode=edit">Edit</a></td>'.
 	//delete
@@ -353,14 +353,14 @@ $result =  mysqli_query($conn, $sql) or die('Error');
 while ($row = mysqli_fetch_array($result)){
 	echo 
 	'<tr>'.
-	'<td>' .$row['PlatformName'].'</td>'.
+	'<td>' .$row['GamePlatformName'].'</td>'.
 	//view
 	'<td><a href="update.php?id=' . $row['GamePlatformID'] .'&table=GamePlatform&mode=view">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['GamePlatformID'] .'&table=GamePlatform&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['GamePlatformID'] . '&table=GamePlatform"
-	onclick="return confirm(\'Are you sure you want to delete ' . $row['PlatformName'] . '?\' );">Delete</a></td>'
+	onclick="return confirm(\'Are you sure you want to delete ' . $row['GamePlatformName'] . '?\' );">Delete</a></td>'
 	.'</tr>';
 }
 echo '</table></div>';
@@ -455,6 +455,16 @@ if ($mode == 'view'){
 		if( !is_int($key) ){
 			if ($key == $tableID){
 				continue;
+			}elseif (substr($key,-2) == $idString){
+				$tableName = trim($key,"ID");
+				$option = $tableName."Name";
+				$sql = "SELECT $option FROM $tableName where $key = $value";
+				$select = mysqli_query($conn, $sql);
+			//dropdown 
+				while ($row = mysqli_fetch_array($select)) {
+					echo'<tr>'.'<td>' . $tableName . ' </td><td> ' . $row[$option] . '</td></tr>';
+				}
+
 			}else{
 				echo '<tr>'.'<td>'.$key.' </td><td> '.$value.'</td></tr>';
 			}
@@ -472,9 +482,26 @@ if ($mode == 'view'){
 	foreach($row as $key => $value)
 	{
 		if( !is_int($key) ){
+			//skip primary key
 			if ($key == $tableID){
 				continue;
-			}else{
+			// if field is xxxID
+			} elseif (substr($key,-2) == $idString){
+				$tableName = trim($key,"ID");
+				$option = $tableName."Name";
+				$sql = "SELECT $key, $option FROM $tableName";
+				$select = mysqli_query($conn, $sql);
+				echo '<div><label for="'.$key.'">'.$tableName.':</label>
+				<select id="'.$key.'" name="'.$key.'">';		
+
+			//dropdown 
+				while ($row = mysqli_fetch_array($select)) {
+					echo '<option value="' . $row[$key] . '">' . $row[$option] . '</option>';
+				}
+				echo '</select><div>';		
+
+			}
+			else{
 			echo '
 			<div>
 				<label for="'.$key.'">'.$key.':</label>
