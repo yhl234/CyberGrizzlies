@@ -11,7 +11,7 @@ main{
 	justify-content: space-evenly;
 }
 .view{
-	border: 1px black solid;
+	/* border: 1px black solid; */
 	position: relative;
 }
 .cancel{

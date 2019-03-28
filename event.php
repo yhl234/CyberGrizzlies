@@ -1,5 +1,7 @@
 <?php 
 	//start file
+	require 'head.php';
+	echo '</head>';
 	require 'header.php';
 ?>
 <!-- HTML header and form start -->
