@@ -521,14 +521,20 @@ if ($mode == 'view'){
 
 				}
 				echo '</select><div>';
-			}
-			else{
-			echo '
-			<div>
-				<label for="'.$key.'">'.$key.':</label>
-				<input id="'.$key.'" name="'.$key.'" value="'.$value.'" required />
-			</div>
-			';
+			}elseif ($key == 'EventDateTime' || $key == 'StartDate'){
+				echo '
+				<div>
+					<label for="'.$key.'">'.$key.':</label>
+					<input type="datetime-local" id="'.$key.'" name="'.$key.'" value="'.$value.'" required />
+				</div>
+				';
+			}else{
+				echo '
+				<div>
+					<label for="'.$key.'">'.$key.':</label>
+					<input id="'.$key.'" name="'.$key.'" value="'.$value.'" required />
+				</div>
+				';
 			}
 		}
 	}
