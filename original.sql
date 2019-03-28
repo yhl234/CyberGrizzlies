@@ -31,7 +31,7 @@ CREATE TABLE StreamPlatform (
 
 CREATE TABLE GamePlatform (
   GamePlatformID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
-  PlatformName VARCHAR(12) NOT NULL,
+  GamePlatformName VARCHAR(12) NOT NULL,
   PRIMARY KEY (GamePlatformID)
 );
 
@@ -43,7 +43,7 @@ CREATE TABLE Genre (
 
 CREATE TABLE EventType (
   EventTypeID INT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
-  TypeName VARCHAR(32) NOT NULL ,
+  EventTypeName VARCHAR(32) NOT NULL ,
   PRIMARY KEY (EventTypeID)
 );
 
@@ -93,13 +93,13 @@ CREATE TABLE Player (
   GameID INT(8) UNSIGNED NOT NULL,
   StatusID INT(8) UNSIGNED NOT NULL,
   LocationID INT(8) UNSIGNED NOT NULL,
-  PlatformID INT(8) UNSIGNED NOT NULL,
+  GamePlatformID INT(8) UNSIGNED NOT NULL,
   PRIMARY KEY (PlayerID),
 CONSTRAINT FOREIGN KEY (UserID) REFERENCES USER (UserID) ON DELETE CASCADE,
 CONSTRAINT FOREIGN KEY (GameID) REFERENCES Game (GameID) ON DELETE CASCADE,
 CONSTRAINT FOREIGN KEY (StatusID) REFERENCES STATUS (StatusID) ON DELETE CASCADE,
 CONSTRAINT FOREIGN KEY (LocationID) REFERENCES Location (LocationID) ON DELETE CASCADE,
-CONSTRAINT FOREIGN KEY (PlatformID) REFERENCES GamePlatform (GamePlatformID) ON DELETE CASCADE
+CONSTRAINT FOREIGN KEY (GamePlatformID) REFERENCES GamePlatform (GamePlatformID) ON DELETE CASCADE
 );
 
 CREATE TABLE Attendee (
@@ -108,12 +108,12 @@ CREATE TABLE Attendee (
   EventID INT(8) UNSIGNED NOT NULL,
   StatusID INT(8) UNSIGNED NOT NULL,
   IsRemote INT(1) UNSIGNED NOT NULL,
-  PlatformID INT(8) UNSIGNED NOT NULL,
+  GamePlatformID INT(8) UNSIGNED NOT NULL,
   PRIMARY KEY (AttendeeID),
 CONSTRAINT FOREIGN KEY (UserID) REFERENCES USER (UserID) ON DELETE CASCADE,
 CONSTRAINT FOREIGN KEY (EventID) REFERENCES EVENT (EventID) ON DELETE CASCADE,
 CONSTRAINT FOREIGN KEY (StatusID) REFERENCES STATUS (StatusID) ON DELETE CASCADE,
-CONSTRAINT FOREIGN KEY (PlatformID) REFERENCES GamePlatform (GamePlatformID) ON DELETE CASCADE
+CONSTRAINT FOREIGN KEY (GamePlatformID) REFERENCES GamePlatform (GamePlatformID) ON DELETE CASCADE
 );
 
 
@@ -158,7 +158,7 @@ VALUES
 
 -- -FILL Event TYPE TABLE---#
 
-INSERT INTO EventType (TypeName) 
+INSERT INTO EventType (EventTypeName) 
 VALUES 
 ('Weekly Meeting'),
 ('Tournament'),
@@ -187,7 +187,7 @@ VALUES
 
 -- -FILL GAME PLATFORM TABLE---#
 
-INSERT INTO GamePlatform (PlatformName)
+INSERT INTO GamePlatform (GamePlatformName)
 VALUES 
 ('PS4'),
 ('PC'),
@@ -242,7 +242,7 @@ VALUES
 
 -- FILL Attendee TABLE---#
 
-INSERT INTO Attendee (UserID, EventID, StatusID,  IsRemote, PlatformID) 
+INSERT INTO Attendee (UserID, EventID, StatusID,  IsRemote, GamePlatformID) 
 VALUES 
 (1, 1, 3, 0, 6),
 (4, 1, 4, 0, 6),
@@ -257,7 +257,7 @@ VALUES
 
 -- FILL Player TABLE---#
 
-INSERT INTO Player (UserID, GamerTag, GameID, StatusID, LocationID, PlatformID)
+INSERT INTO Player (UserID, GamerTag, GameID, StatusID, LocationID, GamePlatformID)
 VALUES 
 (1, 'HappyPenguin', 1, 1, 2, 1),
 (2, 'PurplePeopleEater', 5, 3, 2, 3),
