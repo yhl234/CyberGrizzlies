@@ -194,7 +194,7 @@ while ($row = mysqli_fetch_array($result)){
 	'<tr>'.
 	'<td>' .$row['EventName'].'</td>'.
 	'<td>' .$row['EventDateTime'].'</td>'.
-	'<td>' .$row['TypeName'].'</td>'.
+	'<td>' .$row['EventTypeName'].'</td>'.
 	//view
 	'<td><a href="update.php?id=' . $row['EventID'] .'&table=Event&mode=view">View</a></td>'.
 	'<td><a href="update.php?id=' . $row['EventID'] .'&table=Event&mode=edit">Edit</a></td>'.
@@ -213,7 +213,7 @@ echo '
 <div id="EventType">
 <h3> Event Type </h3>
 <table>
-<th>StatusName</th>
+<th>EventTypeName</th>
 <th>View</th>
 <th>Edit</th>
 <th>Delete</th>	
@@ -224,14 +224,14 @@ $result =  mysqli_query($conn, $sql) or die('Error');
 while ($row = mysqli_fetch_array($result)){
 	echo 
 	'<tr>'.
-	'<td>' .$row['TypeName'].'</td>'.
+	'<td>' .$row['EventTypeName'].'</td>'.
 	//view
 	'<td><a href="update.php?id=' . $row['EventTypeID'] .'&table=EventType&mode=view">View</a></td>'.
 	//update
 	'<td><a href="update.php?id=' . $row['EventTypeID'] .'&table=EventType&mode=edit">Edit</a></td>'.
 	//delete
 	'<td><a href="update_delete.php?id=' . $row['EventTypeID'] . '&table=EventType"
-	onclick="return confirm(\'Are you sure you want to delete ' . $row['TypeName'] . '?\' );">Delete</a></td>'
+	onclick="return confirm(\'Are you sure you want to delete ' . $row['EventTypeName'] . '?\' );">Delete</a></td>'
 	.'</tr>';
 }
 echo '</table></div>';
@@ -453,20 +453,28 @@ if ($mode == 'view'){
 	foreach($row as $key => $value)
 	{
 		if( !is_int($key) ){
+			//skip primary key
 			if ($key == $tableID){
 				continue;
+			// if field is xxxID	
 			}elseif (substr($key,-2) == $idString){
 				$tableName = trim($key,"ID");
 				$option = $tableName."Name";
 				$sql = "SELECT $option FROM $tableName where $key = $value";
 				$select = mysqli_query($conn, $sql);
-			//dropdown 
+				//dropdown 
 				while ($row = mysqli_fetch_array($select)) {
-					echo'<tr>'.'<td>' . $tableName . ' </td><td> ' . $row[$option] . '</td></tr>';
+					echo'<tr><td>' . $tableName . ' </td><td> ' . $row[$option] . '</td></tr>';
 				}
-
+			// set yes no for 1 0
+			}elseif ($key == 'IsRemote' || $key == 'SingleMulti' || $key == 'ActiveStatus' || $key =='PayStatus' || $key == 'ChatStatus'){
+				if ($value == '1'){
+					echo'<tr><td>' . $key . ' </td><td> Yes </td></tr>';
+				}elseif ($value == '0'){
+					echo'<tr><td>' . $key . ' </td><td> No </td></tr>';
+				}
 			}else{
-				echo '<tr>'.'<td>'.$key.' </td><td> '.$value.'</td></tr>';
+				echo '<tr><td>'.$key.' </td><td> '.$value.'</td></tr>';
 			}
 		}
 	}
@@ -500,6 +508,19 @@ if ($mode == 'view'){
 				}
 				echo '</select><div>';		
 
+			}elseif ($key == 'IsRemote' || $key == 'SingleMulti' || $key == 'ActiveStatus' || $key =='PayStatus' || $key == 'ChatStatus'){
+				echo '<div><label for="'.$key.'">'.$key.':</label>
+				<select id="'.$key.'" name="'.$key.'">';
+				if ($value == '1'){
+					echo '<option value="1">Yes</option>';
+					echo '<option value="0">No</option>';
+
+				}elseif ($value == '0'){
+					echo '<option value="0">No</option>';
+					echo '<option value="1">Yes</option>';
+
+				}
+				echo '</select><div>';
 			}
 			else{
 			echo '
