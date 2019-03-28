@@ -1,8 +1,8 @@
-<?php require 'header.php';?>
+<?php require 'head.php';?>
 <link rel="stylesheet" href="css/update.css">
 <script src="js/update.js" defer></script>
 </head>
-<body>
+<?php require 'header.php';?>
 <?php
 require 'connect.php';
 // query all table name
@@ -11,7 +11,7 @@ FROM INFORMATION_SCHEMA.TABLES
 WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA='CyberGrizzlies'";
 $result =  mysqli_query($conn, $sql) or die('Error');
 // populate drop down
-echo '<header>
+echo '<div>
 	<select id="selectedTable">
 			<option value="">---</option>';
 while ($row = mysqli_fetch_array($result)){
@@ -21,10 +21,9 @@ while ($row = mysqli_fetch_array($result)){
 		}
 	}
 }
-echo '</select></header>';
+echo '</select></div>';
 mysqli_close($conn);
 ?>
-
 </header>
 <main>
 <article>
@@ -486,6 +485,7 @@ if ($mode == 'view'){
 
 	mysqli_close($conn);
 } else{
+	//edit -------------------------------------------------------------
 	echo '<div class="view edit"><a class="cancel" href="update.php"><i class="fas fa-times"></i></a><h3>Edit'.$table.'</h3><form method="POST" action="update_edit_edit.php?id=' . $id .'&table='.$table.'">';
 	foreach($row as $key => $value)
 	{
@@ -497,14 +497,24 @@ if ($mode == 'view'){
 			} elseif (substr($key,-2) == $idString){
 				$tableName = trim($key,"ID");
 				$option = $tableName."Name";
-				$sql = "SELECT $key, $option FROM $tableName";
+				$sql = "SELECT $key FROM $tableName where $key = $value";
 				$select = mysqli_query($conn, $sql);
-				echo '<div><label for="'.$key.'">'.$tableName.':</label>
-				<select id="'.$key.'" name="'.$key.'">';		
-
-			//dropdown 
+			//dropdown selected
 				while ($row = mysqli_fetch_array($select)) {
-					echo '<option value="' . $row[$key] . '">' . $row[$option] . '</option>';
+					$selectValue = $row[$key];
+					
+				}
+				$sql = "SELECT $key, $option FROM $tableName";
+				$dropdown = mysqli_query($conn, $sql);
+			//dropdown 
+				echo '<div><label for="'.$key.'">'.$key.':</label>
+				<select id="'.$key.'" name="'.$key.'">';
+				while ($row = mysqli_fetch_array($dropdown)) {
+					if($selectValue == $row[$key]){
+						echo '<option value="' . $row[$key] . '"selected>' . $row[$option] . '</option>';
+					}else{
+						echo '<option value="' . $row[$key] . '">' . $row[$option] . '</option>';
+					}
 				}
 				echo '</select><div>';		
 
@@ -551,7 +561,7 @@ if ($mode == 'view'){
 ?>
 
 <?php
-//edit -------------------------------------------------------------
+
 // require 'connect.php';
 // $table = $_GET['table'];
 // $id = $_GET['id'];
