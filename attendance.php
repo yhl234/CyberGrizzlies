@@ -89,7 +89,7 @@
 		$platforms = mysqli_query($conn, $sql);
 
 		// Start of platform select box
-		echo '<select id="platformId" name="platformId" required>';
+		echo '<select id="platformId" name="gameplatformid" required>';
 
 		// Insert default empty entry?
 		// echo '<option disabled selected value=""> -- select an option -- </option>';

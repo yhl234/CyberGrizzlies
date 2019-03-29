@@ -6,7 +6,7 @@ require 'header.php';
 	$statusId = $_POST['statusId'];
 	$newStatus = "";
 	$isRemote = $_POST['isRemote'];
-	$platformId = $_POST['platformId'];
+	$platformId = $_POST['gameplatformid'];
 	$addNewStatus = false;
 	// If "other" was selected, grab the newly entered status
 	if($statusId == -1)
@@ -77,7 +77,7 @@ require 'header.php';
 		}
 
 
-		$attendSql = "INSERT INTO attendees (userId, eventId, statusId, isRemote, platformId) VALUES (" . $userId . ", " . $eventId . ", " . $statusId . ", " . $isRemote . ", " . $platformId . ");";
+		$attendSql = "INSERT INTO attendee (userId, eventId, statusId, isRemote, gameplatformId) VALUES (" . $userId . ", " . $eventId . ", " . $statusId . ", " . $isRemote . ", " . $platformId . ");";
 		if (mysqli_query($conn, $attendSql)) {
 			//Confirm with the user
 			echo '<p>Attendee created successfully.</p>';
