@@ -81,7 +81,7 @@ main {
 /* Form Styles */
 form {
   background-color: #36393f;
-  width: auto;
+  width: 560px;
   margin: auto;
   padding: 4%;
   border: 1px solid #7289da;
