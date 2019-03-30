@@ -145,7 +145,6 @@ require 'head.php';
 		// For each stream entered, submit it
 		for ($i = 1; $i <= $streamCount; $i++) 
 		{
-			echo $i;
 			$platformId = $_POST['streamPlatform' . $i];
 			$url = $_POST['streamUrl' . $i];
 
