@@ -182,7 +182,8 @@ input[type=time] {
   width: 99%;
 }
 /* RYAN TOUCHED THE CSS HERE PLEASE DON'T BE MAD AT ME */
-input[type=tel] {
+/* Added support for discord tag highlighting as well */
+input[type=tel], input#discord, input[type=email] {
   border: transparent;
   border-bottom: 1px solid lightcoral;
   font-family: 'Roboto', sans-serif;
@@ -196,7 +197,7 @@ input[type=tel] {
   color: white;
   width: 97%;
 }
-input[type=tel]:valid {
+input[type=tel]:valid, input#discord:valid, input[type=email]:valid {
   border-color: seagreen;
 }
 /* END OF INTERFERENCE BY RYAN PLEASE DON'T KILL ME */
