@@ -3,7 +3,12 @@ var typeCB = document.getElementById("eventType");
 var locForm = document.getElementById("locSubForm");
 var typeForm = document.getElementById("typeSubForm");
 
-typeCB.onchange = function () {
+UpdateType();
+UpdateLoc();
+
+typeCB.onchange = UpdateType;
+
+function UpdateType () {
 	if (typeCB.value == -1)
 	{
 		typeForm.className = "";
@@ -16,7 +21,9 @@ typeCB.onchange = function () {
 	}
 };
 
-locCB.onchange = function () {
+locCB.onchange = UpdateLoc;
+
+function UpdateLoc () {
 	if (locCB.value == -1)
 	{
 		locForm.className = "";

@@ -7,7 +7,7 @@ CREATE TABLE User (
   FirstName VARCHAR(24),
   MiddleName VARCHAR(24),
   LastName VARCHAR(24),
-  StartDate DATETIME NOT NULL,
+  StartDate DATE NOT NULL,
   ActiveStatus TINYINT(1) NOT NULL,
   PayStatus TINYINT(1) NOT NULL,
   Email VARCHAR(64),

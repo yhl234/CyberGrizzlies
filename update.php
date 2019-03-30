@@ -1,8 +1,5 @@
 <?php require 'head.php';?>
-<link rel="stylesheet" href="css/update.css">
 <script src="js/update.js" defer></script>
-</head>
-<?php require 'header.php';?>
 <?php
 require 'connect.php';
 // query all table name

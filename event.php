@@ -1,12 +1,10 @@
 <?php 
 	//start file
 	require 'head.php';
-	echo '</head>';
-	// require 'header.php';
 ?>
 <!-- HTML header and form start -->
 <h1>create event</h1>
-<form action="add_event.php" method="get">
+<form action="add_event.php" method="post">
 
 	<label for="eventName"></label>
 	<input type="text" autofocus id="eventName" placeholder="Event Title" name="eventName" />
@@ -14,14 +12,14 @@
 
 	<!-- Start php -->
 	<?php
-		$sql = "SELECT typeid, typename FROM eventstype ORDER BY typename";
+		$sql = "SELECT eventtypeid, eventtypename FROM eventtype ORDER BY eventtypename";
 		$types = mysqli_query($conn, $sql);
 
 		echo '<select id="eventType" name="eventType" required>';
 
 		while ($type = mysqli_fetch_array($types)) {
-			$typeId = $type['typeid'];
-			$tname = $type['typename'];
+			$typeId = $type['eventtypeid'];
+			$tname = $type['eventtypename'];
 			echo '<option value="' . $typeId . '">' . $tname . '</option>';
 		}
 		echo '<option value="-1">Other</option>';
@@ -35,14 +33,14 @@
 		</div>';
 
 		echo '<br /><label for="eventDate">Event date:</label>';
-    echo '<input type="date" id="eventDate" name="eventDate" />
+    	echo '<input type="date" id="eventDate" name="eventDate" value="' . date('Y') . '-' . date('m') . '-' . date('d') . '"/>
           <input type="time" name="eventTime" id="eventTime" />';
 		
 		echo '<br /><label for="locationId">Location:</label>';
 
 
 		
-		$sql = "SELECT locationid, locationname FROM locations ORDER BY locationid";
+		$sql = "SELECT locationid, locationname FROM location ORDER BY locationid";
 		$locs = mysqli_query($conn, $sql);
 
 		echo '<select id="locationId" name="locationId" required>';
