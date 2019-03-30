@@ -16,7 +16,7 @@
 	<label for="lastName">Last Name:</label>
 	<input type="text" id="lastName" name="lastName" />
 	<label for="startDate">Start Date:*</label>
-    <input type="date" id="startDate" name="startDate" required/>
+    <input type="date" id="startDate" name="startDate" value="<?php echo date('Y') . '-' . date('m') . '-' . date('d'); ?>" required/>
 	<label for="active">Currently Active:*</label>
 	<input type="checkbox" name="active" id="active" required checked/>
 	<label for="payStatus">Pay Status:*</label>
