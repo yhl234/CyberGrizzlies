@@ -106,7 +106,6 @@
 			$lname = $loc['locationname'];
 			echo '<option value="' . $locId . '">' . $lname . '</option>';
 		}
-		echo '<option value="-1">Other</option>';	
 		echo '</select>';
 
 
