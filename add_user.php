@@ -92,9 +92,9 @@ require 'head.php';
 	$streamCount = $_POST['streamCount'];
 	if ($streamCount > 0) {
 		// For each stream entered, submit it
-		for ($i = 1; $i < $streamCount; $i++) {
-			$platformId = $_POST['streamPlatform' + $i];
-			$url = $_POST['streamUrl' + $i];
+		for ($i = 1; $i <= $streamCount; $i++) {
+			$platformId = $_POST['streamPlatform' . $i];
+			$url = $_POST['streamUrl' . $i];
 
 			// Per stream validation
 			if(strlen($url) > 100) {
@@ -102,9 +102,9 @@ require 'head.php';
 				$errormsg = "Please enter a stream URL under 100 characters for stream " . $streamCount . ".";
 			}
 
-			if ($platform == -1)
+			if ($platformId == -1)
 			{
-				$newPlatform = $_POST['newPlatform' + $i];
+				$newPlatform = $_POST['newPlatform' . $i];
 
 				if (strlen($newPlatform) > 12)
 				{
@@ -136,15 +136,16 @@ require 'head.php';
 	if (($streamCount > 0) && $ok) 
 	{
 		// For each stream entered, submit it
-		for ($i = 1; $i < $streamCount; $i++) 
+		for ($i = 1; $i <= $streamCount; $i++) 
 		{
-			$platformId = $_POST['streamPlatform' + $i];
-			$url = $_POST['streamUrl' + $i];
+			echo $i;
+			$platformId = $_POST['streamPlatform' . $i];
+			$url = $_POST['streamUrl' . $i];
 
 			// Add new stream platform if necessary
-			if ($platform == -1)
+			if ($platformId == -1)
 			{
-				$newPlatform = $_POST['newPlatform' + $i];
+				$newPlatform = $_POST['newPlatform' . $i];
 
 				if ($ok)
 				{
@@ -163,7 +164,6 @@ require 'head.php';
 			if ($ok) {
 				$sql = "INSERT INTO stream (streamlink, userid, streamplatformid) VALUES ('" . $url . "', '" . $userId . "', '" . $platformId . "');";
 				if (mysqli_query($conn, $sql)) {
-					echo '<p>New streaming entry ' . $streamCount . ' successfully created for ' . $username . '.</p>';
 				}
 			}
 			else {
