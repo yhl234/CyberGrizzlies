@@ -18,21 +18,21 @@
 	<label for="startDate">Start Date:*</label>
     <input type="date" id="startDate" name="startDate" value="<?php echo date('Y') . '-' . date('m') . '-' . date('d'); ?>" required/>
 	<label for="active">Currently Active:*</label>
-	<input type="checkbox" name="active" id="active" required checked/>
+	<input type="checkbox" name="active" id="active" checked/>
 	<label for="payStatus">Pay Status:*</label>
-	<input type="checkbox" name="payStatus" id="payStatus" required/>
+	<input type="checkbox" name="payStatus" id="payStatus" />
 	<label for="email">Email:</label>
 	<input type="email" id="email" placeholder="you@email.com" name="email" />
 	<label for="phone">Phone Number:</label>
 	<input id="phone" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" />
 	<label for="chatStatus">Active in Chat:*</label>
-	<input type="checkbox" name="chatStatus" id="chatStatus" required/>
+	<input type="checkbox" name="chatStatus" id="chatStatus" />
 	<label for="discord">Discord Tag:</label>
-	<input id="discord" name="discord" type="text" pattern="[a-z0-9._%+-]+#[0-9]{4}$" placeholder="username#0000" />
+	<input id="discord" name="discord" type="text" pattern="[A-Za-z0-9._%+-]+#[0-9]{4}$" placeholder="username#0000" />
 
 	<button id="addStream" type="button">+Add Streaming Platform</button>
 	<input type="submit" value="Submit" />
-	<input type="hidden" id="streamCount" value=0 />
+	<input type="hidden" id="streamCount" value=0 name="streamCount"/>
 </form>
 <!-- So I was in fact a terrible person and put inline JS into the HTML, but it was the only way I could make it work -->
 <?php
