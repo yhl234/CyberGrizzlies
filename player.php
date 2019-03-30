@@ -44,21 +44,21 @@
 		
 		echo '<div id="gameSubForm" class="hidden">';
 			echo '<label for="gameName">Game Name:</label>';
-			echo '<input type="text" name="gameName" id="gameName" required />';
+			echo '<input type="text" name="gameName" id="gameName" required placeholder="New game name"/>';
 			echo '<label for="multiplayer">Multiplayer:</label>';
-			echo '<input type="checkbox" name="multiplayer" id="multiplayer" />';
+			echo '<input type="checkbox" name="multiplayer" id="multiplayer" /><br />';
 			echo '<label for="genreId">Genre:</label>';
 
 
-			$sql = "SELECT genreid, genrename FROM genre ORDER BY genrename";
+			$sql = "SELECT genreId, genrename FROM genre ORDER BY genrename";
 			$genres = mysqli_query($conn, $sql);
 
 			echo '<select id="genreId" name="genreId" required>';
 
 			while ($genre = mysqli_fetch_array($genres)) {
 				$genreId = $genre['genreId'];
-				$genreName = $game['genrename'];
-				echo '<option value="' . $genreId . '">' . $genreName . '</option>';
+				$genrename = $genre['genrename'];
+				echo '<option value="' . $genreId . '">' . $genrename . '</option>';
 			}
 			echo '<option value="-1">Other</option>';
 			echo '</select>';
@@ -135,7 +135,7 @@
 	//End form
 	echo '</form>';
 	// Include script to handle subform hiding
-  echo '<script src="js/event.js"></script>';
+  echo '<script src="js/user.js"></script>';
 	//End file
 	require 'footer.php';
 	?>
