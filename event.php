@@ -6,7 +6,7 @@
 ?>
 <!-- HTML header and form start -->
 <h1>create event</h1>
-<form action="add_event.php" method="get">
+<form action="add_event.php" method="post">
 
 	<label for="eventName"></label>
 	<input type="text" autofocus id="eventName" placeholder="Event Title" name="eventName" />
@@ -14,14 +14,14 @@
 
 	<!-- Start php -->
 	<?php
-		$sql = "SELECT typeid, typename FROM eventstype ORDER BY typename";
+		$sql = "SELECT eventtypeid, eventtypename FROM eventtype ORDER BY eventtypename";
 		$types = mysqli_query($conn, $sql);
 
 		echo '<select id="eventType" name="eventType" required>';
 
 		while ($type = mysqli_fetch_array($types)) {
-			$typeId = $type['typeid'];
-			$tname = $type['typename'];
+			$typeId = $type['eventtypeid'];
+			$tname = $type['eventtypename'];
 			echo '<option value="' . $typeId . '">' . $tname . '</option>';
 		}
 		echo '<option value="-1">Other</option>';
@@ -42,7 +42,7 @@
 
 
 		
-		$sql = "SELECT locationid, locationname FROM locations ORDER BY locationid";
+		$sql = "SELECT locationid, locationname FROM location ORDER BY locationid";
 		$locs = mysqli_query($conn, $sql);
 
 		echo '<select id="locationId" name="locationId" required>';
