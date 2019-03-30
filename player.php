@@ -65,7 +65,7 @@
 			// Second level subform
 			echo '<div id="genreSubForm" class="hidden">';
 				echo '<label for="newGenreName">New Genre Name:</label>';
-				echo '<input type="text" name="newGenreName" id="newGenreName" required />';
+				echo '<input type="text" name="newGenreName" id="newGenreName" required placeholder="New Genre" />';
 			// End of second level subform
 			echo '</div>';
 		// End of first level subform
