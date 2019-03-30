@@ -45,6 +45,13 @@ require 'head.php';
 		$ok = false;
 		$errormsg = "Please enter a Discord tag under 64 characters long.";
 	}
+	// Check if username already exists (Needs to be unique within the club, according to spec)
+	$sql = "SELECT userId FROM user WHERE username = " . $username . ";";
+	if (mysqli_query($conn, $sql)->num_rows > 0) {
+		$ok = false;
+		$errormsg = "Please enter a unique username!";
+	}
+
 
 	// Empty string to null conversion
 	if ($fname == "") {
