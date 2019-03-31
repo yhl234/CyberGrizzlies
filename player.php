@@ -25,7 +25,7 @@
 	?>
 
 	<label for="gamertag">Gamer tag:</label>
-	<input type="text" autofocus id="gamertag" placeholder="In game name" name="eventName" />
+	<input type="text" autofocus id="gamertag" placeholder="In game name" name="gamertag" />
 	<br /><label for="gameId">Game:</label>
 
 	<?php
@@ -44,7 +44,7 @@
 		
 		echo '<div id="gameSubForm" class="hidden">';
 			echo '<label for="gameName">Game Name:</label>';
-			echo '<input type="text" name="gameName" id="gameName" required placeholder="New game name"/>';
+			echo '<input type="text" name="gameName" id="gameName" placeholder="New game name"/>';
 			echo '<label for="multiplayer">Multiplayer:</label>';
 			echo '<input type="checkbox" name="multiplayer" id="multiplayer" /><br />';
 			echo '<label for="genreId">Genre:</label>';
@@ -65,7 +65,7 @@
 			// Second level subform
 			echo '<div id="genreSubForm" class="hidden">';
 				echo '<label for="newGenreName">New Genre Name:</label>';
-				echo '<input type="text" name="newGenreName" id="newGenreName" required placeholder="New Genre" />';
+				echo '<input type="text" name="newGenreName" id="newGenreName" placeholder="New Genre" />';
 			// End of second level subform
 			echo '</div>';
 		// End of first level subform
@@ -124,7 +124,7 @@
 		echo '</select>';
 		echo '<div id="platformSubForm" class="hidden">';
 			echo '<br /><label for="newPlatformName">New Platform Name:</label>';
-			echo '<input type="text" name="newPlatformName" id="newPlatformName"/>';
+			echo '<input type="text" name="newPlatformName" placeholder="New Game Platform" id="newPlatformName"/>';
 		echo '</div>';
 
 
