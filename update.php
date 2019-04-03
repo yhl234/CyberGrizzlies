@@ -21,8 +21,6 @@ while ($row = mysqli_fetch_array($result)){
 echo '</select></div>';
 mysqli_close($conn);
 ?>
-</header>
-<main>
 <article>
 <?php
 //user table
@@ -574,6 +572,5 @@ if ($mode == 'view'){
 
 ?>
 </aside>
-</main>
 
 <?php require 'footer.php'?>
