@@ -78,7 +78,9 @@ main {
   padding: 12px 10px 92px 10px;
   border: 1px solid #c8c8c847;
 }
-/* Form Styles */
+
+/* Form Styles 
+---------------------------- */
 form {
   background-color: #36393f;
   width: 560px;
@@ -235,8 +237,55 @@ textarea {
   color: #fff;
   outline: none;
 }
+/* Table styles
+----------------------------*/
+table {
+  background-color: #36393f;
+  width: 806px;
+  margin: auto;
+  margin-top: 3%;
+  padding: 0%;
+  border: 1px solid #7289da;
+  display: inline-grid;
+  box-shadow: 0px 0px 5px 0px #7289da;
+  height: auto;
+}
+td, th {
+  border: 1px solid #ddd;
+  padding: 19px;
+  color: white;
+  width: 95px;
+  border: none;
+  /* padding-left: 48px; */
+}
+td a, th a {
+  text-decoration: none;
+  color: #7289da;
+}
+td a:hover, th a:hover {
+  text-decoration: none;
+  color: #ddd;
+}
+th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #a8afd9;
+  color: white;
+  width: 65px;
+  outline: 1px solid #a8afd9;
+  font-size: 15px;
+  height: 24px;
+  padding-left: 48px;
+}
 
-/* Footer Styles */
+
+
+
+
+
+/* Footer Styles
+---------------------------- */
 footer {
   grid-area: c;
   margin-top: 1%
