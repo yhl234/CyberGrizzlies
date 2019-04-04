@@ -241,6 +241,9 @@ input[type=datetime-local] {
   width: 99%;
   border-bottom: 1px solid #c8c8c847;
 }
+div {
+  margin-top: 4%;
+}
 /* form button styles */
 input[type=submit] {
   font-family: 'Roboto', sans-serif;
