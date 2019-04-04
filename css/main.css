@@ -179,6 +179,20 @@ input[type=text] {
   color: white;
   width: 97%;
 }
+/* Form edit input styles */
+input {
+  width: 543px;
+  height: 103px;
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  resize: none;
+  background: #32353a;
+  border: 1px solid #c8c8c847;
+  color: #fff;
+  outline: none;
+}
 /* Date select styles */
 input[type=date] {
   outline: none;
