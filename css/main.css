@@ -337,6 +337,9 @@ footer p {
   font-size: 12px;
   text-transform: uppercase;
 }
+.fas {
+  color: white;
+}
 /* Footer Soical Icons */
 .fa {
   padding: 20px;
