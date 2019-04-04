@@ -80,8 +80,7 @@ h3 {
   margin-top: 2%;
   color: #a8afd9;
   text-transform: uppercase;
-  text-align: left;
-  margin-left: 4%;
+  text-align: center;
 }
 main {
   grid-area: b;
@@ -100,6 +99,7 @@ form {
   display: inline-grid;
   box-shadow: 0px 0px 5px 0px #7289da;
   height: auto;
+  text-align: left;
 }
 
 /* Form label styles */
@@ -225,6 +225,26 @@ input[type=date]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   display: none;
 }
+input[type=datetime-local] {
+  outline: none;
+  border: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  padding: 9px 7px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: left;
+  font-size: 16px;
+  width: 99%;
+  border-bottom: 1px solid #c8c8c847;
+}
+div {
+  margin-top: 4%;
+}
 /* form button styles */
 input[type=submit] {
   font-family: 'Roboto', sans-serif;
@@ -245,7 +265,7 @@ input[type=submit]:hover {
   background: #7289da;
   box-shadow: 0px 0px 5px 0px #7289da;
 }
-input[type=button] {
+button {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
@@ -260,7 +280,7 @@ input[type=button] {
   width: 85px;
   cursor: pointer;
 }
-input[type=button]:hover {
+button:hover {
   background: #7289da;
   box-shadow: 0px 0px 5px 0px #7289da;
 }
@@ -290,12 +310,12 @@ textarea {
 ----------------------------*/
 table {
   background-color: #2c2f33;
-  width: 806px;
+  width: auto;
   margin: auto;
   padding: 0%;
-  /* border: 1px solid #7289da; */
+  border: 1px solid #7289da;
   display: inline-grid;
-  /* box-shadow: 0px 0px 5px 0px #7289da; */
+  box-shadow: 0px 0px 5px 0px #7289da;
   height: auto;
 }
 td, th {
@@ -336,6 +356,14 @@ footer p {
   color: #f6f6f6;
   font-size: 12px;
   text-transform: uppercase;
+}
+.cancel {
+  position: relative;
+  top: 124px;
+  /* border: 1px solid red; */
+  right: -36%;
+  font-size: 19px;
+  color: white;
 }
 /* Footer Soical Icons */
 .fa {
