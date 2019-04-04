@@ -90,9 +90,7 @@ main {
   padding: 12px 10px 92px 10px;
   border: 1px solid #c8c8c847;
 }
-
-/* Form Styles 
----------------------------- */
+/* Form Styles */
 form {
   background-color: #36393f;
   width: 560px;
@@ -288,13 +286,7 @@ th {
   color: #a8afd9;
 }
 
-
-
-
-
-
-/* Footer Styles
----------------------------- */
+/* Footer Styles */
 footer {
   grid-area: c;
   margin-top: 1%
@@ -348,11 +340,5 @@ footer hr {
 /* Hidden sub forms */
 .hidden {
 	display: none;
-}
-/* Ryan use this style for your hidden subfroms after being selected */
-.flex {
-  display: flex;
-  flex-direction: column;
-  margin-top: 16px;
 }
 
