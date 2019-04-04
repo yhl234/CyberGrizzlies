@@ -290,7 +290,7 @@ textarea {
 ----------------------------*/
 table {
   background-color: #2c2f33;
-  width: 806px;
+  width: auto;
   margin: auto;
   padding: 0%;
   /* border: 1px solid #7289da; */
