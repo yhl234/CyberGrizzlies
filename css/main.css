@@ -336,17 +336,14 @@ footer p {
   font-size: 12px;
   text-transform: uppercase;
 }
-/* .fas {
-  color: white;
+.cancel {
   position: absolute;
-  bottom: -22%;
-  right: 30%;
-  font-size: 19px;
+    bottom: -61%;
+    /* border: 1px solid red; */
+    right: 31%;
+    font-size: 19px;
+    color: white;
 }
-.fas:hover {
-  background: #7289da;
-  text-shadow: 0px 0px 5px 0px #7289da;
-} */
 /* Footer Soical Icons */
 .fa {
   padding: 20px;
