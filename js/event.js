@@ -16,7 +16,8 @@ function UpdateType () {
 	}
 	else
 	{		
-		typeForm.className = "hidden";
+    typeForm.className = "hidden";
+    typeForm.classList.add('typeSubFormFlex');
 		console.log("type subform hidden");
 	}
 };
