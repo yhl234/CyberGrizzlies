@@ -182,8 +182,8 @@ input[type=text] {
 /* Form edit input styles */
 input {
   width: 543px;
-  height: 103px;
-  padding: 5px;
+  height: 30px;
+  padding: 7px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -192,6 +192,7 @@ input {
   border: 1px solid #c8c8c847;
   color: #fff;
   outline: none;
+  margin-left: 5px;
 }
 /* Date select styles */
 input[type=date] {
