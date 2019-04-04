@@ -193,6 +193,7 @@ input {
   color: #fff;
   outline: none;
   margin-left: 5px;
+  margin-top: 2%;
 }
 /* Date select styles */
 input[type=date] {
