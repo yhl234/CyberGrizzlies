@@ -225,6 +225,22 @@ input[type=date]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   display: none;
 }
+/* form button styles */
+input[type=submit] {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid #7289da;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 16px 0 -7px;
+  background: #36393f;
+  color: white;
+  width: 85px;
+  cursor: pointer;
+}
 ::-webkit-calendar-picker-indicator {
   color: #fff;
   opacity: 1;
