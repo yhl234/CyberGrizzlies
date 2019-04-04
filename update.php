@@ -572,5 +572,4 @@ if ($mode == 'view'){
 
 ?>
 </aside>
-
 <?php require 'footer.php'?>
