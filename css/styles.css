@@ -76,7 +76,7 @@ h1 {
 	padding: 3%;
 	background: linear-gradient(90deg, #46525e, #5c768f, #e74a15);
 	background-size: 300% 300%;
-    animation: Gradient 2s ease infinite;
+    animation: Gradient 5s ease infinite;
 	opacity: .7;
 	transition: all .5s ease-in-out;
 }
@@ -89,7 +89,7 @@ box-shadow: 0px 0px 5px 0px #7289da;
   transform: scale(1.1);
   cursor: pointer;
   opacity:1;
-  
+
 }
 #optionBox {
   display: none;
@@ -98,11 +98,15 @@ box-shadow: 0px 0px 5px 0px #7289da;
   justify-content: center;
   width: 530px;
   height: 350px;
-  background: #1c1c1cdb;
+  /* background: #1c1c1cdb; */
+  background-color: #36393f;
   color: white;
   font-family: 'Raleway';
   font-size: 2.5rem;
   margin: 15% auto;
+  border: 1px solid #7289da;
+  /* display: inline-grid; */
+  box-shadow: 0px 0px 5px 0px #7289da;
 }
 
 img {
@@ -113,12 +117,13 @@ img {
 }
 .dropbtn,button {
 	background: transparent;
-	font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	color: white;
 	padding: 17px 20px 18px 31px;
-	font-size: 26px;
-	border: none;
+	font-size: 20px;
+    border: none;
+    /* text-align: center; */
 	letter-spacing: 5px;
 	cursor: pointer;
 	text-transform: uppercase;
