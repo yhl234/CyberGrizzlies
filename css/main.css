@@ -353,13 +353,13 @@ table {
   box-shadow: 0px 0px 5px 0px #7289da;
   height: auto;
 }
-td, th {
-  padding: 19px;
+td {
+  padding: 18px;
   color: white;
   width: 95px;
   border: none;
   height: 35px;
-  vertical-align: middle;
+  outline: 1px solid #32353a;
 }
 td a, th a {
   text-decoration: none;
