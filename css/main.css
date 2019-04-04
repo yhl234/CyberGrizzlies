@@ -245,7 +245,7 @@ input[type=submit]:hover {
   background: #7289da;
   box-shadow: 0px 0px 5px 0px #7289da;
 }
-input[type=button] {
+button[type=button] {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
@@ -260,7 +260,7 @@ input[type=button] {
   width: 85px;
   cursor: pointer;
 }
-input[type=button]:hover {
+button[type=button]:hover {
   background: #7289da;
   box-shadow: 0px 0px 5px 0px #7289da;
 }
