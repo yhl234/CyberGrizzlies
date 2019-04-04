@@ -337,12 +337,12 @@ footer p {
   text-transform: uppercase;
 }
 .cancel {
-  position: absolute;
-    bottom: -61%;
-    /* border: 1px solid red; */
-    right: 31%;
-    font-size: 19px;
-    color: white;
+  position: relative;
+  top: 124px;
+  /* border: 1px solid red; */
+  right: -36%;
+  font-size: 19px;
+  color: white;
 }
 /* Footer Soical Icons */
 .fa {
