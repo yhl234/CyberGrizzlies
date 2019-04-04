@@ -80,8 +80,8 @@ h3 {
   margin-top: 2%;
   color: #a8afd9;
   text-transform: uppercase;
-  text-align: left;
-  margin-left: 4%;
+  text-align: center;
+  margin-left: 1%;
 }
 main {
   grid-area: b;
@@ -245,7 +245,7 @@ input[type=submit]:hover {
   background: #7289da;
   box-shadow: 0px 0px 5px 0px #7289da;
 }
-input[type=button] {
+button {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
@@ -260,7 +260,7 @@ input[type=button] {
   width: 85px;
   cursor: pointer;
 }
-input[type=button]:hover {
+button:hover {
   background: #7289da;
   box-shadow: 0px 0px 5px 0px #7289da;
 }
@@ -290,12 +290,12 @@ textarea {
 ----------------------------*/
 table {
   background-color: #2c2f33;
-  width: 806px;
+  width: auto;
   margin: auto;
   padding: 0%;
-  /* border: 1px solid #7289da; */
+  border: 1px solid #7289da;
   display: inline-grid;
-  /* box-shadow: 0px 0px 5px 0px #7289da; */
+  box-shadow: 0px 0px 5px 0px #7289da;
   height: auto;
 }
 td, th {
@@ -336,6 +336,9 @@ footer p {
   color: #f6f6f6;
   font-size: 12px;
   text-transform: uppercase;
+}
+.fas {
+  color: white;
 }
 /* Footer Soical Icons */
 .fa {
