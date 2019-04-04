@@ -99,6 +99,7 @@ form {
   display: inline-grid;
   box-shadow: 0px 0px 5px 0px #7289da;
   height: auto;
+  text-align: left;
 }
 
 /* Form label styles */
@@ -259,7 +260,6 @@ input[type=submit] {
   color: white;
   width: 85px;
   cursor: pointer;
-  text-align: left;
 }
 input[type=submit]:hover {
   background: #7289da;
