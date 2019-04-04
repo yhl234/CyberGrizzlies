@@ -291,7 +291,8 @@ footer hr {
 .hidden {
 	display: none;
 }
-.Flex {
+/* Ryan use this style for your hidden subfroms after being selected */
+.flex {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
