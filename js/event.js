@@ -16,7 +16,7 @@ function UpdateType () {
 	}
 	else
 	{		
-    typeForm.className = "hidden";
+		typeForm.className = "hidden";
 		console.log("type subform hidden");
 	}
 };
