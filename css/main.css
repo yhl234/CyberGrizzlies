@@ -287,6 +287,11 @@ footer hr {
   border-bottom: 1px solid #7289da;
   margin-top: 1%;
 }
+/* Hidden sub forms */
 .hidden {
 	display: none;
+}
+.statusSubForm {
+  display: flex;
+  flex-direction: column;
 }
