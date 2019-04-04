@@ -291,7 +291,7 @@ footer hr {
 .hidden {
 	display: none;
 }
-.statusSubForm {
+.typeSubForm {
   display: flex;
   flex-direction: column;
 }
