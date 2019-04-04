@@ -71,6 +71,18 @@ h1 {
   text-align: left;
   margin-left: 13%;
 }
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 7px;
+  font-size: 18px;
+  padding: 3% 3% 2% 3%;
+  margin-top: 0%;
+  color: #a8afd9;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 13%;
+}
 main {
   grid-area: b;
   text-align: center;
@@ -267,16 +279,13 @@ td a:hover, th a:hover {
   color: #ddd;
 }
 th {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
   text-align: left;
-  background-color: #a8afd9;
-  color: white;
-  width: 65px;
-  outline: 1px solid #a8afd9;
-  font-size: 15px;
-  height: 24px;
-  padding-left: 48px;
+  font-size: 16px;
+  padding: 2px 7px;
+  color: #a8afd9;
 }
 
 
