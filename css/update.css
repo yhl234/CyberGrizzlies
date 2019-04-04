@@ -163,7 +163,6 @@ select option {
   width: 32%;
   border-bottom: 1px solid #c8c8c847;
   position: relative;
-  left: -1%;
 }
 /* Form input type styles */
 input[type=text] {
