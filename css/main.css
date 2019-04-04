@@ -241,6 +241,10 @@ input[type=submit] {
   width: 85px;
   cursor: pointer;
 }
+input[type=submit]:hover {
+  background: #7289da;
+  box-shadow: 0px 0px 5px 0px #7289da;
+}
 ::-webkit-calendar-picker-indicator {
   color: #fff;
   opacity: 1;
