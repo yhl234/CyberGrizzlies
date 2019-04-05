@@ -17,10 +17,10 @@
     <ul>
       <li><a class="border-link" href="#">#create</a>
         <ul>
-          <li><a class="border-link" href="#">attendance</a></li>
-          <li><a class="border-link" href="#">event</a></li>
-          <li><a class="border-link" href="#">player</a></li>
-          <li><a class="border-link" href="#">user</a></li>
+          <li><a class="border-link" href="attendance.php">attendance</a></li>
+          <li><a class="border-link" href="event.php">event</a></li>
+          <li><a class="border-link" href="player.php">player</a></li>
+          <li><a class="border-link" href="user.php">user</a></li>
         </ul>
       </li>
       <li><a class="border-link" href="update.php">#edit</a></li>
