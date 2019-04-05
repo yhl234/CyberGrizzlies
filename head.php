@@ -15,11 +15,12 @@
 <header>
   <nav>
     <ul>
-      <li>#create
+      <li><a class="border-link" href="#">#create</a>
         <ul>
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">attendance</a></li>
+          <li><a href="#">event</a></li>
+          <li><a href="#">player</a></li>
+          <li><a href="#">user</a></li>
         </ul>
       </li>
       <li><a class="border-link" href="update.php">#edit</a></li>
