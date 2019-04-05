@@ -355,6 +355,9 @@ table {
   height: auto;
   border-collapse: collapse;
 }
+tr:nth-child(odd) {
+  background: red;
+}
 td {
   padding: 18px;
   color: white;
