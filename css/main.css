@@ -67,14 +67,15 @@ li:hover ul {
   text-align: center;
   padding: 10px;
 }
-li:hover ul:nth-of-type(2) {
+li:hover ul:nth-last-of-type() {
   display: inline-grid;
   position: absolute;
-  left: 700px;
+  left: 800px;
   top: 165px;
   text-align: center;
   padding: 10px;
 }
+
 li:hover li {
   float: none;
   background: #36393f;
