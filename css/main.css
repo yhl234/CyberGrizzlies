@@ -67,10 +67,10 @@ li:hover ul {
   text-align: center;
   padding: 10px;
 }
-#reports ul {
+#reports{
   display: none;
 }
-#reports{
+li:hover #reports{
   display: inline-grid;
   position: absolute;
   left: 697px;
