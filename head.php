@@ -14,20 +14,12 @@
 <body>
 <header>
   <nav>
-  <div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div> 
-</div>
+    <ul>
+      <li><a class="border-link" href="http://localhost/CyberGrizzlies/CyberGrizzlies/landing.html">#create</a></li>
+      <li><a class="border-link" href="update.php">#edit</a></li>
+      <li><a class="border-link" href="#">#reports</a></li>
+    </ul>
   </nav>
 </header>
 <main>
+
