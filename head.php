@@ -26,10 +26,10 @@
       <li><a class="border-link" href="update.php">#edit</a></li>
       <li><a class="border-link" href="#">#reports</a>
         <ul>
-          <li><a class="border-link" href="attendance.php">attendance</a></li>
-          <li><a class="border-link" href="event.php">event</a></li>
-          <li><a class="border-link" href="player.php">player</a></li>
-          <li><a class="border-link" href="user.php">user</a></li>
+          <li><a class="border-link" href="attendance.php">help</a></li>
+          <li><a class="border-link" href="event.php">me</a></li>
+          <li><a class="border-link" href="player.php">dear</a></li>
+          <li><a class="border-link" href="user.php">muhammad</a></li>
         </ul>
       </li>
     </ul>
