@@ -59,7 +59,7 @@ nav ul a:hover {
 li ul {
   display: none;
 }
-li:hover ul {
+li:hover ul:nth-child(1) {
   display: inline-grid;
   position: absolute;
   left: 490px;
