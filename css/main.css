@@ -47,6 +47,23 @@ nav ul a {
 nav ul a:hover {
   color: #7289DA;
 }
+/* Nav drop down menus */
+li ul {
+  display: none;
+}
+li:hover ul {
+  display: block; 
+  position: absolute;
+}
+li:hover li {
+  float: none;
+}
+  li:hover a {
+    background: #f00;
+  }
+  li:hover li a:hover {
+    background: #000;
+  }
 /* bottom border hover animation */
 .border-link::after {
   content: '';
