@@ -334,8 +334,8 @@ input[type=checkbox] {
   margin-top: 0%;
   margin-bottom: 2%;
 }
-input:checked + label {
-  color: red;
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px hotpink;
 }
 button {
   font-family: 'Roboto', sans-serif;
