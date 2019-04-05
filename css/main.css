@@ -336,8 +336,6 @@ input[type=checkbox] {
 }
 input[type=checkbox]:checked + label {
   color: #7289da;
-  font-style: normal;
-  text-shadow: 0px 0px 5px 0px #7289da;
 } 
 button {
   font-family: 'Roboto', sans-serif;
