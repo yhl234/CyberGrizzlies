@@ -138,7 +138,7 @@ label {
   text-align: left;
   font-size: 16px;
   padding: 2px 7px;
-  margin: 4px 0;
+  margin: 5px 0;
   background: transparent;
   color: #a8afd9;
 }
@@ -321,10 +321,18 @@ input[type=submit] {
   width: 99px;
   cursor: pointer;
   height: auto;
+  /* margin: 19px auto; */
 }
 input[type=submit]:hover {
   background: #7289da;
   box-shadow: 0px 0px 5px 0px #7289da;
+}
+input[type=checkbox] {
+  box-sizing: border-box;
+  padding: 1px;
+  width: 28px;
+  margin-top: 0%;
+  margin-bottom: 2%;
 }
 button {
   font-family: 'Roboto', sans-serif;
@@ -337,9 +345,11 @@ button {
   padding: 12px 1px 12px 1px;
   background: #36393f;
   color: #ffffff;
-  width: 99px;
+  width: 175px;
   cursor: pointer;
   height: auto;
+  margin-top: 3%;
+  margin-bottom: 2%;
 }
 button:hover {
   background: #7289da;
