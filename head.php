@@ -21,6 +21,7 @@
           <li><a href="#">CSS</a></li>
           <li><a href="#">JavaScript</a></li>
         </ul>
+        </a>
       </li>
       <li><a class="border-link" href="update.php">#edit</a></li>
       <li><a class="border-link" href="#">#reports</a></li>
