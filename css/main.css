@@ -289,12 +289,12 @@ input[type=submit] {
   text-transform: uppercase;
   border: 1px solid #7289da;
   border-radius: 6px;
-  padding: 12px;
-  margin: 16px 0 -7px;
+  padding: 12px 1px 12px 1px;
   background: #36393f;
-  color: white;
-  width: 85px;
+  color: #ffffff;
+  width: 99px;
   cursor: pointer;
+  height: auto;
 }
 input[type=submit]:hover {
   background: #7289da;
@@ -308,12 +308,12 @@ button {
   text-transform: uppercase;
   border: 1px solid #7289da;
   border-radius: 6px;
-  padding: 12px;
-  margin: 16px 0 -7px;
+  padding: 12px 1px 12px 1px;
   background: #36393f;
-  color: white;
-  width: 85px;
+  color: #ffffff;
+  width: 99px;
   cursor: pointer;
+  height: auto;
 }
 button:hover {
   background: #7289da;
