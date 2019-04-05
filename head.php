@@ -15,7 +15,12 @@
 <header>
   <nav>
     <ul>
-      <li><a class="border-link" href="http://localhost/CyberGrizzlies/CyberGrizzlies/landing.html">#create</a></li>
+      <li><a class="border-link" href="http://localhost/CyberGrizzlies/CyberGrizzlies/landing.html">#create</a>
+        <li class="init">[SELECT]</li>
+        <li data-value="value 1">Option 1</li>
+        <li data-value="value 2">Option 2</li>
+        <li data-value="value 3">Option 3</li>
+      </li>
       <li><a class="border-link" href="update.php">#edit</a></li>
       <li><a class="border-link" href="#">#reports</a></li>
     </ul>
