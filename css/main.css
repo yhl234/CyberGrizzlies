@@ -56,17 +56,22 @@ li ul {
   display: none;
 }
 li:hover ul {
-  display: block; 
+  display: inline-grid;
   position: absolute;
+  left: 490px;
+  top: 165px;
+  text-align: center;
+  padding: 10px;
 }
 li:hover li {
   float: none;
+  background: #36393f;
 }
   li:hover a {
-    background: #f00;
+    background: transparent;
   }
   li:hover li a:hover {
-    background: #000;
+    background: transparent;
   }
 /* bottom border hover animation */
 .border-link::after {
