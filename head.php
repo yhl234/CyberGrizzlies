@@ -25,12 +25,12 @@
       </li>
       <li><a class="border-link" href="update.php">#edit</a></li>
       <li><a class="border-link" href="#">#reports</a>
-        <ul>
+        <ul div id="reports">
           <li><a class="border-link" href="attendance.php">help</a></li>
           <li><a class="border-link" href="event.php">me</a></li>
           <li><a class="border-link" href="player.php">dear</a></li>
           <li><a class="border-link" href="user.php">muhammad</a></li>
-        </ul>
+        </div>  
       </li>
     </ul>
   </nav>
