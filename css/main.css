@@ -334,7 +334,7 @@ input[type=checkbox] {
   margin-top: 0%;
   margin-bottom: 2%;
 }
-:checked {
+input:checked + label {
   color: red;
 }
 button {
