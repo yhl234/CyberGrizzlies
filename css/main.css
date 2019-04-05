@@ -333,11 +333,8 @@ input[type=checkbox] {
   width: 28px;
   margin-top: 0%;
   margin-bottom: 2%;
-  background: transparent;
-  box-shadow: 0px 0px 5px 0px #7289da;
 }
 input[type="checkbox"]:checked {
-  background: transparent;
   box-shadow: 0px 0px 5px 0px #7289da;
 }
 button {
