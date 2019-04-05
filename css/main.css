@@ -67,7 +67,7 @@ li:hover ul {
   text-align: center;
   padding: 10px;
 }
-li:hover ul:nth-last-of-type(1) {
+li:hover ul:nth-last-of-type(2) {
   display: inline-grid;
   position: absolute;
   left: 800px;
