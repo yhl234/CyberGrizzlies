@@ -8,6 +8,7 @@ require 'head.php';
 	$isRemote = $_POST['isRemote'];
 	$platformId = $_POST['gameplatformid'];
 	$addNewStatus = false;
+	$attendeeId = "";
 	// If "other" was selected, grab the newly entered status
 	if($statusId == -1)
 	{
@@ -76,7 +77,10 @@ require 'head.php';
 		$attendSql = "INSERT INTO attendee (userId, eventId, statusId, isRemote, gameplatformId) VALUES (" . $userId . ", " . $eventId . ", " . $statusId . ", " . $isRemote . ", " . $platformId . ");";
 		if (mysqli_query($conn, $attendSql)) {
 			//Confirm with the user
+			$attendeeId = mysqli_insert_id($conn);
 			echo '<p>Attendee created successfully.</p>';
+			echo '<p>You will be redirected to the new attendee in 3 seconds...</p>';
+			header( "refresh:3;url=./update.php?id=" . $attendeeId . "&table=Attendee&mode=view" );
 		}
 		else {
 			echo '<p>Error creating new attendee.</p>';
