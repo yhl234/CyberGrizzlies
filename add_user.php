@@ -175,8 +175,15 @@ require 'head.php';
 			else {
 				echo '<p>Error creating new streaming entry ' . $streamCount . '.</p>';
 				echo "<p>" . $errormsg . "</p>";
+				$ok = false;
 			}
 		}
+	}
+
+	if ($ok) {
+		
+		echo '<p>You will be redirected to the new user in 3 seconds...</p>';
+		header( "refresh:3;url=./update.php?mode=view&tablename=User&id=" . $userId );
 	}
 	
 
