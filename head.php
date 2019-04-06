@@ -15,25 +15,10 @@
 <header>
   <nav>
     <ul>
-      <li><a class="border-link" href="#">#create</a>
-        <ul>
-          <li><a class="border-link" href="attendance.php">attendance</a></li>
-          <li><a class="border-link" href="event.php">event</a></li>
-          <li><a class="border-link" href="player.php">player</a></li>
-          <li><a class="border-link" href="user.php">user</a></li>
-        </ul>
-      </li>
+      <li><a class="border-link" href="http://localhost/CyberGrizzlies/CyberGrizzlies/landing.html">#create</a></li>
       <li><a class="border-link" href="update.php">#edit</a></li>
-      <li><a class="border-link" href="#">#reports</a>
-        <ul div id="reports">
-          <li><a class="border-link" href="attendance.php">help</a></li>
-          <li><a class="border-link" href="event.php">me</a></li>
-          <li><a class="border-link" href="player.php">dear</a></li>
-          <li><a class="border-link" href="user.php">muhammad</a></li>
-        </div>  
-      </li>
+      <li><a class="border-link" href="#">#reports</a></li>
     </ul>
   </nav>
 </header>
 <main>
-

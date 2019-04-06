@@ -9,5 +9,6 @@
 <li><a href="#"><img src="images/youtube.svg" alt="youtube icon" class="footer-icon" ></li>
 </ul>
 </footer>
+</main>
 </body>
 </html>
