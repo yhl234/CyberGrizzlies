@@ -1,6 +1,7 @@
 var selected = document.querySelector('select');
 var view = document.querySelector('aside')
 var tables = ['Player', 'Status', 'Attendee', 'Event', 'EventType', 'Location', 'Game', 'Genre', 'GamePlatform', 'Stream', 'StreamPlatform', 'User'];
+var redirect = document.querySelector('#redirect').value;
 
 function showTable(){
 	//get value from input
@@ -32,8 +33,10 @@ selected.addEventListener('change', function () {
 
 window.addEventListener('load',function(){
 	var val = localStorage.getItem('selected');
-	if (val){
+	if (val && redirect == false){
 		selected.value = val;
+		showTable();
+	}else if (redirect){
 		showTable();
 	}
 })

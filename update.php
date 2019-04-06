@@ -7,14 +7,23 @@ $sql = "SELECT TABLE_NAME
 FROM INFORMATION_SCHEMA.TABLES
 WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA='CyberGrizzlies'";
 $result =  mysqli_query($conn, $sql) or die('Error');
+// redirect from add
+$redirect = $_GET['table'];
+echo '<input id="redirect" name="redirect" type="hidden" value="'. $redirect .'"/>';
+
 // populate drop down
+
 echo '<div>
 	<select id="selectedTable">
 			<option value="">---</option>';
 while ($row = mysqli_fetch_array($result)){
 	foreach($row as $key => $value){
 		if( !is_int($key) ){
-		echo '<option value="'.$value.'">'.$value.'</option>';
+			if($value == $redirect){
+				echo '<option value="' . $value . '"selected>' . $value . '</option>';
+			} else{
+				echo '<option value="'.$value.'">'.$value.'</option>';
+			}
 		}
 	}
 }
@@ -526,11 +535,18 @@ if ($mode == 'view'){
 
 				}
 				echo '</select><div>';
-			}elseif ($key == 'EventDateTime' || $key == 'StartDate'){
+			}elseif ($key == 'EventDateTime'){
 				echo '
 				<div>
 					<label for="'.$key.'">'.$key.':</label>
 					<input type="datetime-local" id="'.$key.'" name="'.$key.'" value="'.$value.'" required />
+				</div>
+				';
+			}elseif ($key == 'StartDate'){
+				echo '
+				<div>
+					<label for="'.$key.'">'.$key.':</label>
+					<input type="date" id="'.$key.'" name="'.$key.'" value="'.$value.'" required />
 				</div>
 				';
 			}else{
