@@ -183,7 +183,7 @@ require 'head.php';
 	if ($ok) {
 		
 		echo '<p>You will be redirected to the new user in 3 seconds...</p>';
-		header( "refresh:3;url=./update.php?mode=view&tablename=User&id=" . $userId );
+		header( "refresh:3;url=./update.php?mode=view&table=User&id=" . $userId );
 	}
 	
 
