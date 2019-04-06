@@ -130,10 +130,12 @@ require 'head.php';
 		}
 
 		$sql = "INSERT INTO player (userid, gamertag, gameid, statusid, locationid, gameplatformid) VALUES (" . $userId . ", '" . $gamertag . "', " . $gameId . ", " . $statusId . ", " . $locationId . ", " . $platformId . ");";
-		echo $sql;
 		if (mysqli_query($conn, $sql)) {
 			//Confirm with the user
+			$playerId = mysqli_insert_id($conn);
 			echo '<p>Player ' . $gamertag . ' created successfully.</p>';
+			echo '<p>You will be redirected to the new player in 3 seconds...</p>';
+			header( "refresh:3;url=./update.php?id=" . $playerId . "&table=Player&mode=view" );
 		}
 		else {
 			echo '<p>Error creating new player.</p>';

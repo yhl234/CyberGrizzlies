@@ -102,7 +102,10 @@ require 'head.php';
 		$eventSql = "INSERT INTO event (eventName, eventTypeId, eventdatetime, locationId, eventDescription) VALUES ('" . $name . "', " . $typeId . ", '" . $datetime . "', " . $locationId . ", '" . $desc . "');";
 		if (mysqli_query($conn, $eventSql)) {
 			//Confirm with the user
+			$eventId = mysqli_insert_id($conn);
 			echo '<p>Event created successfully.</p>';
+			echo '<p>You will be redirected to the new event in 3 seconds...</p>';
+			header( "refresh:3;url=./update.php?id=" . $eventId . "&table=Event&mode=view" );
 		}
 		else {
 			echo '<p>Error creating new event.</p>';
