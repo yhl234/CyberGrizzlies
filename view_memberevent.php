@@ -53,19 +53,19 @@
 	// $query = false;
 	if ($query) {
 		if ($startDate && !$endDate) {
-			$sql = "SELECT e.* FROM event as e INNER JOIN attendee as a WHERE a.eventid = e.eventid AND a.userid = " . $userId . " AND Date(e.EventDateTime) >= '" . $startDate . "'";
+			$sql = "SELECT e.* FROM event as e INNER JOIN attendee as a WHERE a.eventid = e.eventid AND a.userid = " . $userId . " AND (e.EventDateTime) >= '" . $startDate . "' ORDER BY Date(e.EventDateTime)";
 			// echo 'start and no end';
 		}
 		else if ($endDate && !$startDate) {
-			$sql = "SELECT e.* FROM event as e INNER JOIN attendee as a WHERE a.eventid = e.eventid AND a.userid = " . $userId . " AND Date(e.EventDateTime) <= '" . $endDate . "'";
+			$sql = "SELECT e.* FROM event as e INNER JOIN attendee as a WHERE a.eventid = e.eventid AND a.userid = " . $userId . " AND (e.EventDateTime) <= '" . $endDate . "' ORDER BY Date(e.EventDateTime)";
 			// echo 'end and no start';
 		}
 		else if ($startDate && $endDate) {
-			$sql = "SELECT e.* FROM event as e INNER JOIN attendee as a WHERE a.eventid = e.eventid AND a.userid = " . $userId . " AND Date(EventDateTime) <= '" . $endDate . "'";
+			$sql = "SELECT e.* FROM event as e INNER JOIN attendee as a WHERE a.eventid = e.eventid AND a.userid = " . $userId . " AND (EventDateTime) <= '" . $endDate . "' ORDER BY Date(e.EventDateTime)";
 			// echo 'start and end';
 		}
 		else {
-			$sql = "SELECT e.* FROM event as e INNER JOIN attendee as a WHERE a.eventid = e.eventid AND a.userid = " . $userId;
+			$sql = "SELECT e.* FROM event as e INNER JOIN attendee as a WHERE a.eventid = e.eventid AND a.userid = " . $userId . " ORDER BY (e.EventDateTime)";
 			// echo 'no start or end';
 		}
 		echo '<table><th>Event Name</th><th>Event Type</th><th>Event Date</th><th>Event Location</th><th>Event Description</th>';
