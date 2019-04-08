@@ -37,14 +37,7 @@
 			echo '<option value="' . $eventId . '" selected>' . $eventName . ' (' . $eventDateTime . ')</option>';
 		}
 	}
-	// End of users select box
 	echo '</select>';
-
-	// echo '<label for="startDate">Start date:</label>';
-	// echo '<input type="date" id="startDate" name="startDate" value="' . $_GET['startDate'] . '"/>';
-
-	// echo '<label for="endDate">End date:</label>';
-	// echo '<input type="date" id="endDate" name="endDate" value="' . $_GET['endDate'] . '"/>';
 
 
 	$sql = "";
@@ -59,47 +52,27 @@
             <th>Attendee Username</th><th>Attendence Type</th>';
             $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_array($result)) {
-                // $username = $row['UserName'];
-                // $attendenceType = $row['IsRemote'];
-                // $attendenceTypes = mysqli_query($conn, "SELECT * FROM IsRemote");
-                // // while ($trow = mysqli_fetch_array($attendenceTypes)) {
-                // //     if ($trow['IsRemote'] == $type) {
-                // //         $type = $trow['TypeName'];
-                // //     }
-                // // }
-                // // $time = $row['EventDateTime'];
-                // // $location = $row['LocationID'];
-                // $locs = mysqli_query($conn, "SELECT * FROM location");
-                // while ($lrow = mysqli_fetch_array($locs)) {
-                //     if ($lrow['LocationID'] == $location) {
-                //         $location = $lrow['LocationName'];
-                //     }
-                // }
-                // $description = $row['EventDescription'];
+                if ($row['isremote'] == 1){
+                    $row['isremote'] = "Attending";
+                }
+                elseif($row['isremote'] == 0){
+                    $row['isremote'] = "Not Attending";
+                }
+                else{
+                    $row['isremote'] = "N/A";
+                }
                 echo '
                 <tr>
                     <td>' . $row['username'] . '</td>
                     <td>' . $row['isremote'] . '</td>
                 </tr>';
-                // $description = $row['EventDescription'];
-                // echo '
-                // <tr>
-                // 	<td>' . $name . '</td>
-                // 	<td>' . $type . '</td>
-                // 	<td>' . $time . '</td>
-                // 	<td>' . $location . '</td>
-                // 	<td>' . $description . '</td>
-                // </tr>';
             }
             echo '</table>';
 		}
 		else {
-			// $sql = "SELECT e.* FROM event as e INNER JOIN attendee as a WHERE a.eventid = e.eventid AND a.userid = " . $userId . " ORDER BY (e.EventDateTime)";
-			echo 'please select an event';
+			echo 'No events could be found!';
 		}
 
-
-	// echo '<script src="./js/memberevent.js"></script>';
 require 'footer.php';
 ?>
 
