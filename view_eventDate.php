@@ -16,7 +16,7 @@
 		 <li><a href="view_eventDate.php?date=All">All Events</a></li>
 		 <li><a href="view_eventDate.php?date=Past">Past Events</a></li>
 		 <li><a href="view_eventDate.php?date=Future">Future Events</a></li>
-		 <li><a href="view_eventDate.php?date=Upcoming">Upcoming Events</a></li>
+		 <li><a href="view_eventDate.php?date=Upcoming">Upcoming Events in 10 days</a></li>
 	 </ul>
  </nav>
  <table>
