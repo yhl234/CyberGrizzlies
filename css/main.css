@@ -44,9 +44,11 @@ nav ul a {
   text-decoration: none;
   color: #f6f6f6;
   padding: 1p;
+  display: block;
 }
 nav ul a:hover {
   color: #7289DA;
+  display: block;
 }
 li:hover {
   /* background: #a8afd9; */
@@ -74,13 +76,9 @@ ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
+  /* background: white; */
 }
 
-ul li ul li {
-  /* clear: both; */
-  /* width: 100%; */
-  padding: 17px -12px 21px 0px;
-}
 /* bottom border hover animation */
 .border-link::after {
   content: '';
