@@ -17,7 +17,7 @@
     <ul>
       <li><a class="border-link" href="http://localhost/CyberGrizzlies/CyberGrizzlies/landing.html">#create</a></li>
       <li><a class="border-link" href="update.php">#edit</a>
-      <ul class="dropdown">
+      <ul>
         <li><a href="#">Sub-1</a></li>
         <li><a href="#">Sub-2</a></li>
         <li><a href="#">Sub-3</a></li>
