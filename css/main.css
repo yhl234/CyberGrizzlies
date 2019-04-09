@@ -121,8 +121,7 @@ h3 {
   margin-top: 2%;
   color: #a8afd9;
   text-transform: uppercase;
-  text-align: left;
-  margin-left: 4%;
+  text-align: center;
 }
 main {
   grid-area: b;
