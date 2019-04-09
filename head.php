@@ -15,7 +15,7 @@
 <header>
   <nav>
     <ul>
-      <li><a class="border-link" href="http://localhost/CyberGrizzlies/CyberGrizzlies/landing.html">#create</a>
+      <li><a class="border-link">#create</a>
       <ul>
         <li><a href="user.php">User</a></li>
         <li><a href="player.php">Player</a></li>
