@@ -286,6 +286,25 @@ input[type=submit]:hover {
   background: #7289da;
   box-shadow: 0px 0px 5px 0px #7289da;
 }
+#addStream {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid #7289da;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 16px 0 -7px;
+  background: #36393f;
+  color: white;
+  width: 85px;
+  cursor: pointer;
+}
+#addStream:hover {
+  background: #7289da;
+  box-shadow: 0px 0px 5px 0px #7289da;
+}
 input[type=button] {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
