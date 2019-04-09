@@ -366,12 +366,12 @@ textarea {
 ----------------------------*/
 table {
   background-color: #2c2f33;
-  width: 806px;
+  width: auto;
   margin: auto;
   padding: 0%;
-  /* border: 1px solid #7289da; */
+  border: 1px solid #7289da;
   display: inline-grid;
-  /* box-shadow: 0px 0px 5px 0px #7289da; */
+  box-shadow: 0px 0px 5px 0px #7289da;
   height: auto;
 }
 td, th {
