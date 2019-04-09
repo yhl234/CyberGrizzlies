@@ -78,7 +78,7 @@ ul li ul li:hover {
   background: #a8afd9;
 }
 ul li ul li a:hover {
-  color: #7289DA;
+  color: #fff;
   display: block;
 }
 ul li:hover > ul,
