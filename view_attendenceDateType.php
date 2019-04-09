@@ -11,9 +11,7 @@
 	if (!$eventId) {
 		$eventId = 1;
 	}
-	// $startDate = $_GET['startDate'];
-	// $endDate = $_GET['endDate'];
-	// $sql = "";
+
 	$query = true;
 
 	if (empty($eventId)) {
@@ -43,10 +41,11 @@
 	$sql = "";
 
 		if ($query) {
-			$sql = "SELECT username, isremote FROM Attendee INNER JOIN user WHERE `EventID` = $eventId";
+			$sql = "SELECT username, isremote FROM Attendee INNER JOIN user WHERE `EventID` = $eventId ORDER BY isremote DESC, username";
             
             
             echo '<table>
+
             <caption>Search attendees by event date and attendence type</caption>
 
             <th>Attendee Username</th><th>Attendence Type</th>';
