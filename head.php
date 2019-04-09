@@ -15,7 +15,14 @@
 <header>
   <nav>
     <ul>
-      <li><a class="border-link" href="http://localhost/CyberGrizzlies/CyberGrizzlies/landing.html">#create</a></li>
+      <li><a class="border-link" href="http://localhost/CyberGrizzlies/CyberGrizzlies/landing.html">#create</a>
+      <ul>
+        <li><a href="user.php">User</a></li>
+        <li><a href="player.php">Player</a></li>
+        <li><a href="attendance.php">Attendance</a></li>
+        <li><a href="event.php">Event</a></li>
+      </ul>
+    </li>
       <li><a class="border-link" href="update.php">#edit</a></li>
       <li><a class="border-link" href="#">#reports</a></li>
     </ul>

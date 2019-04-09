@@ -43,10 +43,51 @@ nav ul a {
   letter-spacing: 1px;
   text-decoration: none;
   color: #f6f6f6;
+  padding: 1p;
+  display: block;
 }
 nav ul a:hover {
   color: #7289DA;
+  display: block;
 }
+li:hover {
+  cursor: pointer;
+}
+
+ul li ul {
+  background: #2c2f33;
+  visibility: hidden;
+  opacity: 0;
+  width: 138px;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 8px;
+  left: 217px;
+  display: none;
+  padding-left: 2px;
+  padding-right: 8px;
+  box-shadow: 0px 0px 5px 0px #7289da;
+  text-align: center;
+}
+
+ul li ul li {
+  padding: 19px;
+  width: 107px;
+}
+ul li ul li:hover {
+  background: #a8afd9;
+}
+ul li ul li a:hover {
+  color: #fff;
+  display: block;
+}
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
 /* bottom border hover animation */
 .border-link::after {
   content: '';
