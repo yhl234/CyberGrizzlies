@@ -171,9 +171,9 @@ label {
 select {
   outline: none;
   border: none;
-  font-weight: 300;
-  letter-spacing: 1px;
-  text-align: left;
+  /* font-weight: 300; */
+  /* letter-spacing: 1px; */
+  /* text-align: left; */
   color: #fff;
   background-color: transparent;
   padding: 9px 7px;
@@ -184,6 +184,7 @@ select {
   font-size: 16px;
   width: 101%;
   border-bottom: 1px solid #c8c8c847;
+  margin-bottom: 18px;
 }
 #selectedTable {
   outline: none;
@@ -366,7 +367,7 @@ textarea {
 }
 input {
   width: 543px;
-  height: 103px;
+  height: 41px;
   padding: 5px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -376,6 +377,7 @@ input {
   border: 1px solid #c8c8c847;
   color: #fff;
   outline: none;
+  margin-bottom: 22px;
 }
 
 /* Table styles
