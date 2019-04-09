@@ -1,7 +1,7 @@
 <!-- <script src="js/main.js"></script> -->
 		</main>
 		<footer>
-      <hr>
+      <hr />
 			<p>&#xa9 group 3 2019 - all rights reserved</p> 
 			<!-- <hr> -->
 			<ul>
