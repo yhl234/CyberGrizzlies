@@ -157,6 +157,7 @@ label {
   margin: 4px 0;
   background: transparent;
   color: #a8afd9;
+  display: inline-block;
 }
 /* Form place holder text styles*/
 ::placeholder {
@@ -239,19 +240,18 @@ input[type=date] {
   margin-bottom: 13px;
 }
 input[type=checkbox] {
-  outline: none;
   border: none;
   color: #fff;
   background-color: transparent;
-  padding: 9px 7px;
+  padding: 6px 7px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
-  text-align: left;
   font-size: 16px;
-  width: 99%;
+  width: 3%;
   border-bottom: 1px solid #c8c8c847;
-  margin-bottom: 13px;
+  margin-bottom: 9px;
+  margin-top: -6px;
 }
 /* Time select styles */
 input[type=time] {
