@@ -132,7 +132,7 @@ article {
 
     h1 {
         width: 270px;
-        margin: 21% auto;
+        margin: 300px auto 0 auto;
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
         font-size: 30px;
@@ -233,9 +233,10 @@ box-shadow: 0px 0px 5px 0px #7289da;
   font-size: 16px;
   font-family: sans-serif;
   text-transform: lowercase;
-  margin-top: 2px;
-  margin-left: -27px;
+  margin-top: 1px;
+  margin-left: -48px;
   text-align: center;
+  width: 189px;
 }
 
 .dropdown:hover .dropbtn {
