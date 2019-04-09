@@ -68,11 +68,16 @@ ul li ul {
 }
 
 ul li:hover > ul,
-ul li ul:hover {visibility: visible;opacity: 1;display: block;}
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
 
 ul li ul li {
   clear: both;
   width: 100%;
+  padding: 24px 40px 21px 3px;
 }
 /* bottom border hover animation */
 .border-link::after {
