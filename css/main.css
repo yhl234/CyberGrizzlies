@@ -141,7 +141,10 @@ form {
   box-shadow: 0px 0px 5px 0px #7289da;
   height: auto;
 }
-
+div {
+  display: flex;
+  flex-direction: column;
+}
 /* Form label styles */
 label {
   border: transparent;
@@ -361,6 +364,20 @@ textarea {
   color: #fff;
   outline: none;
 }
+input {
+  width: 543px;
+  height: 103px;
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  resize: none;
+  background: #32353a;
+  border: 1px solid #c8c8c847;
+  color: #fff;
+  outline: none;
+}
+
 /* Table styles
 ----------------------------*/
 table {
@@ -400,6 +417,14 @@ th {
   background: #36393f;
   outline: 1px solid #36393f;
   text-align: center;
+}
+.fas {
+  font-weight: 900;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: 122px;
+  right: -38%;
 }
 
 /* Footer Styles */
