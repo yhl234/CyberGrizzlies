@@ -25,7 +25,7 @@
 	?>
 
 	<label for="gamertag">Gamer tag:</label>
-	<input type="text" autofocus id="gamertag" placeholder="In game name" name="gamertag" />
+	<input type="text" autofocus id="gamertag" name="gamertag" />
 	<br /><label for="gameId">Game:</label>
 
 	<?php
