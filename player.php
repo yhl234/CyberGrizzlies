@@ -44,7 +44,7 @@
 		
 		echo '<div id="gameSubForm" class="hidden">';
 			echo '<label for="gameName">Game Name:</label>';
-			echo '<input type="text" name="gameName" id="gameName" placeholder="New game name"/>';
+			echo '<input type="text" name="gameName" id="gameName" />';
 			echo '<label for="multiplayer">Multiplayer:</label>';
 			echo '<input type="checkbox" name="multiplayer" id="multiplayer" /><br />';
 			echo '<label for="genreId">Genre:</label>';
