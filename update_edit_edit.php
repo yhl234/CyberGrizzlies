@@ -30,5 +30,5 @@ mysqli_query($conn, $sql) or die('Error updating database.'.$sql);
 
 
 mysqli_close($conn);
-header('Location: update.php');
+header('Location: update.php?id=' . $id .'&table='.$table.'&mode=view');
 ?>
