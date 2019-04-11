@@ -132,7 +132,7 @@ article {
 
     h1 {
         width: 270px;
-        margin: 300px auto 0 auto;
+        margin: 379px auto 0 auto;
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
         font-size: 30px;
@@ -174,16 +174,7 @@ article {
       }
 }
 
-h1:hover {
-box-shadow: 0px 0px 5px 0px #7289da;
-  color: #ffffffde;
-  background: #313030e3;
-  transition: all .3s ease-in;
-  transform: scale(1.1);
-  cursor: pointer;
-  opacity:1;
-
-}
+h1:hover {box-shadow: 0px 0px 5px 0px #7289da;color: #ffffffde;background: #313030e3;transition: all .3s ease-in;transform: scale(1.1);cursor: pointer;opacity:1;}
 
 
 .dropbtn,button {
