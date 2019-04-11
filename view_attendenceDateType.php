@@ -24,11 +24,11 @@
   <div>
   <label for="EventId">Events:</label>';
 	$sql = "SELECT EventId, EventName, EventDateTime FROM Event ORDER BY EventDateTime";
-	$event = mysqli_query($conn, $sql);
+	$events = mysqli_query($conn, $sql);
 	// Start the event select box
 	echo '<select id="EventId" name="EventId" required>';
 	// Echo out all the events as options
-	while ($event = mysqli_fetch_array($event)) {
+	while ($event = mysqli_fetch_array($events)) {
 		$eventId = $event['EventId'];
         $eventName = $event['EventName'];
         $eventDateTime = $event['EventDateTime'];
@@ -47,7 +47,7 @@
 	$sql = "";
 
 		if ($query) {
-			$sql = "SELECT username, isremote FROM Attendee INNER JOIN user WHERE `EventID` = $eventId";
+			$sql = "SELECT username, firstname, lastname, isremote FROM Attendee INNER JOIN user WHERE `EventID` = $eventId";
             
             
             echo '
@@ -55,7 +55,7 @@
             <table>
             
 
-            <th>Attendee Username</th><th>Attendence Type</th>';
+            <th>Attendee Id</th><th>Attendee Username</th><th>First Name</th><th>Last Name</th><th>Attendence Type</th>';
             $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_array($result)) {
                 if ($row['isremote'] == 1){
@@ -69,7 +69,10 @@
                 }
                 echo '
                 <tr>
+                    <td>' . $row['attendeeid'] . '</td>
                     <td>' . $row['username'] . '</td>
+                    <td>' . $row['firstname'] . '</td>
+                    <td>' . $row['lastname'] . '</td>
                     <td>' . $row['isremote'] . '</td>
                 </tr>';
             }
@@ -89,11 +92,7 @@ require 'footer.php';
     
 To Do:
 
-1. Populate drop down list with events by date (includes event name and date) DONE
-
-2. Show attendees for event
-
-3. Order attendees by attendence type (isRemote y/n)
+1. Table is showing duplicate attendees, where is the issue coming from?
 
 
 -->
