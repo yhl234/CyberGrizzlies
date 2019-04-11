@@ -33,7 +33,8 @@
 		</div>';
 
 		echo '<br /><label for="eventDate">Event date:</label>';
-    	echo '<input type="date" id="eventDate" name="eventDate" value="' . date('Y') . '-' . date('m') . '-' . date('d') . '"/>
+      echo '<input type="date" id="eventDate" name="eventDate" value="' . date('Y') . '-' . date('m') . '-' . date('d') . '"/>';
+      echo '<label for="eventDate">Event Time:</label>
           <input type="time" name="eventTime" id="eventTime" />';
 		
 		echo '<br /><label for="locationId">Location:</label>';

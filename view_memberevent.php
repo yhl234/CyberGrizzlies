@@ -21,7 +21,9 @@
 		$query = false;
 	}
 
-	echo '<label for="userId">User Attending:</label>';
+  echo '
+  <div>
+  <label for="userId">User Attending:</label>';
 	$sql = "SELECT userId, username, firstname, lastname FROM User ORDER BY userId";
 	$users = mysqli_query($conn, $sql);
 	// Start the user select box
@@ -40,13 +42,22 @@
 		}
 	}
 	// End of users select box
-	echo '</select>';
+  echo '
+  </select>
+  </div>';
 
-	echo '<label for="startDate">Start date:</label>';
-	echo '<input type="date" id="startDate" name="startDate" value="' . $_GET['startDate'] . '"/>';
+  echo 
+  '
+  <div>
+  <label for="startDate">Start date:</label>';
+  echo '<input type="date" id="startDate" name="startDate" value="' . $_GET['startDate'] . '"/>
+  </div>';
 
-	echo '<label for="endDate">End date:</label>';
-	echo '<input type="date" id="endDate" name="endDate" value="' . $_GET['endDate'] . '"/>';
+  echo '
+  <div>
+  <label for="endDate">End date:</label>';
+  echo '<input type="date" id="endDate" name="endDate" value="' . $_GET['endDate'] . '"/>
+  </div>';
 
 
 	$sql = "";

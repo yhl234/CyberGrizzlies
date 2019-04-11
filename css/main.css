@@ -26,6 +26,15 @@ header {
   height: 20%;
   text-align: left;
 }
+main nav ul {
+  display: block;
+  position: absolute;
+  width: 940px;
+  border: none;
+  margin-top: -3%;
+  background: #36393f;
+  padding: 0;
+}
 nav ul {
   display: block;
   position: absolute;
@@ -59,7 +68,6 @@ ul li ul {
   visibility: hidden;
   opacity: 0;
   width: 138px;
-  /* position: relative; */
   transition: all 0.5s ease;
   margin-top: 8px;
   left: 21px;
@@ -68,6 +76,7 @@ ul li ul {
   padding-right: 8px;
   box-shadow: 0px 0px 5px 0px #7289da;
   text-align: center;
+  z-index: 900;
 }
 
 ul li ul li {
@@ -89,12 +98,12 @@ ul li ul:hover {
 }
 
 .reports-dropmenu {
-    /* position: relative; */
     left: 229px;
     top: 80px;
     border: none;
     margin-top: -3%;
     background: #2c2f33;
+    z-index: 900;
 }
 
 /* bottom border hover animation */
@@ -118,8 +127,21 @@ h1 {
   margin-top: 0%;
   color: #a8afd9;
   text-transform: uppercase;
-  text-align: left;
-  margin-left: 13%;
+  text-align: center;
+  margin-left: 5%;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: 14px;
+  padding: 3% 3% 2% 3%;
+  margin-top: -4%;
+  margin-bottom: 29px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 5%;
 }
 h3 {
   font-family: 'Roboto', sans-serif;
@@ -128,9 +150,10 @@ h3 {
   font-size: 18px;
   padding: 3% 3% 2% 3%;
   margin-top: 2%;
+  margin-bottom: 0%;
   color: #a8afd9;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
   margin-left: 4%;
 }
 main {
@@ -151,7 +174,10 @@ form {
   box-shadow: 0px 0px 5px 0px #7289da;
   height: auto;
 }
-
+form div {
+  display: flex;
+  flex-direction: column;
+}
 /* Form label styles */
 label {
   border: transparent;
@@ -183,7 +209,7 @@ select {
   text-align: left;
   color: #fff;
   background-color: transparent;
-  padding: 9px 7px;
+  padding: 9px 5px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
@@ -191,6 +217,133 @@ select {
   font-size: 16px;
   width: 101%;
   border-bottom: 1px solid #c8c8c847;
+  margin-bottom: 14px;
+}
+#userId {
+  outline: none;
+  border: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  padding: 9px 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 16px;
+  width: 37%;
+  border-bottom: 1px solid #c8c8c847;
+  margin-bottom: 14px;
+}
+#startDate {
+  outline: none;
+  border: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  padding: 9px 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 16px;
+  width: 390px;
+  border-bottom: 1px solid #c8c8c847;
+  margin-bottom: 14px;
+} 
+#endDate {
+  outline: none;
+  border: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  padding: 9px 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 16px;
+  width: 404px;
+  border-bottom: 1px solid #c8c8c847;
+  margin-bottom: 14px;
+}
+div select {
+  outline: none;
+  border: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  padding: 9px 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 16px;
+  width: 95%;
+  border-bottom: 1px solid #c8c8c847;
+  margin-bottom: 14px;
+}
+#EventId {
+  outline: none;
+  border: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  padding: 9px 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 16px;
+  width: 37%;
+  border-bottom: 1px solid #c8c8c847;
+  margin-bottom: 14px;
+}
+div input[type=date] {
+  outline: none;
+  border: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  padding: 9px 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 16px;
+  width: 95%;
+  border-bottom: 1px solid #c8c8c847;
+  margin-bottom: 14px;
+}
+#selectedTable {
+  outline: none;
+  border: none;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  padding: 9px 7px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 16px;
+  width: 32%;
+  border-bottom: 1px solid #c8c8c847;
+  margin: 15px auto -6px;
 }
 select option {
   background-color: #36393f;
@@ -205,10 +358,36 @@ input[type=text] {
   text-align: left;
   font-size: 16px;
   padding: 9px 7px;
-  margin: 7px 0;
+  margin: -2px 0;
   background: transparent;
   color: white;
   width: 97%;
+}
+/* edit table inputs */ 
+form input {
+  width: 543px;
+  height: 50px;
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  resize: none;
+  background: #32353a;
+  border: 1px solid #c8c8c847;
+  color: #fff;
+  outline: none;
+  margin-bottom: 20px;width: 543px;
+  height: 50px;
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  resize: none;
+  background: #32353a;
+  border: 1px solid #c8c8c847;
+  color: #fff;
+  outline: none;
+  margin-bottom: 20px;
 }
 /* Date select styles */
 input[type=date] {
@@ -236,10 +415,15 @@ input[type=time] {
   text-align: left;
   font-size: 16px;
   padding: 9px 7px;
-  margin: 13px auto -7px;
+  margin: -8px auto -7px;
   background: transparent;
   color: white;
   width: 99%;
+}
+input [type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+  margin-bottom: 17px;
 }
 /* RYAN TOUCHED THE CSS HERE PLEASE DON'T BE MAD AT ME */
 /* Added support for discord tag highlighting as well */
@@ -252,7 +436,7 @@ input[type=tel], input#discord, input[type=email] {
   text-align: left;
   font-size: 16px;
   padding: 9px 7px;
-  margin: 7px 0;
+  margin: -2px 0 11px;
   background: transparent;
   color: white;
   width: 97%;
@@ -292,6 +476,27 @@ input[type=submit] {
 input[type=submit]:hover {
   background: #7289da;
   box-shadow: 0px 0px 5px 0px #7289da;
+  cursor: pointer;
+}
+button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid #7289da;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 16px 0 -7px;
+  background: #36393f;
+  color: white;
+  width: 85px;
+  cursor: pointer;
+}
+button:hover {
+  background: #7289da;
+  box-shadow: 0px 0px 5px 0px #7289da;
+  cursor: pointer;
 }
 #addStream {
   font-family: 'Roboto', sans-serif;
@@ -311,6 +516,7 @@ input[type=submit]:hover {
 #addStream:hover {
   background: seagreen;
   box-shadow: 0px 0px 5px 0px #009688;
+  cursor: pointer;
 }
 input[type=button] {
   font-family: 'Roboto', sans-serif;
@@ -330,6 +536,7 @@ input[type=button] {
 input[type=button]:hover {
   background: #7289da;
   box-shadow: 0px 0px 5px 0px #7289da;
+  cursor: pointer;
 }
 ::-webkit-calendar-picker-indicator {
   color: #fff;
@@ -357,12 +564,12 @@ textarea {
 ----------------------------*/
 table {
   background-color: #2c2f33;
-  width: 806px;
-  margin: auto;
+  width: auto;
+  margin: 2% auto;
   padding: 0%;
-  /* border: 1px solid #7289da; */
+  border: 1px solid #7289da;
   display: inline-grid;
-  /* box-shadow: 0px 0px 5px 0px #7289da; */
+  box-shadow: 0px 0px 5px 0px #7289da;
   height: auto;
 }
 td, th {
@@ -392,6 +599,14 @@ th {
   background: #36393f;
   outline: 1px solid #36393f;
   text-align: center;
+}
+.fas {
+  font-weight: 900;
+  color: white;
+  font-size: 17px;
+  position: relative;
+  right: -38%;
+  top: 117px;
 }
 
 /* Footer Styles */

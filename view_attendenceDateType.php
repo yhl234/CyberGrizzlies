@@ -20,7 +20,9 @@
 		$query = false;
 	}
 
-	echo '<label for="EventId">Events:</label>';
+  echo '
+  <div>
+  <label for="EventId">Events:</label>';
 	$sql = "SELECT EventId, EventName, EventDateTime FROM Event ORDER BY EventDateTime";
 	$event = mysqli_query($conn, $sql);
 	// Start the event select box
@@ -37,7 +39,9 @@
 			echo '<option value="' . $eventId . '" selected>' . $eventName . ' (' . $eventDateTime . ')</option>';
 		}
 	}
-	echo '</select>';
+  echo '
+  </div>
+  </select>';
 
 
 	$sql = "";
@@ -46,8 +50,10 @@
 			$sql = "SELECT username, isremote FROM Attendee INNER JOIN user WHERE `EventID` = $eventId";
             
             
-            echo '<table>
-            <caption>Search attendees by event date and attendence type</caption>
+            echo '
+            <div>
+            <table>
+            
 
             <th>Attendee Username</th><th>Attendence Type</th>';
             $result = mysqli_query($conn, $sql);
@@ -67,7 +73,9 @@
                     <td>' . $row['isremote'] . '</td>
                 </tr>';
             }
-            echo '</table>';
+            echo '
+            </div>
+            </table>';
 		}
 		else {
 			echo 'No events could be found!';
