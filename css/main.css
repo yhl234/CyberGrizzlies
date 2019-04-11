@@ -28,10 +28,10 @@ header {
 }
 main nav ul {
   display: block;
-  position: absolute;
-  width: 940px;
+  position: relative;
+  width: 938px;
   border: none;
-  margin-top: -3%;
+  margin-top: -1%;
   background: #36393f;
   padding: 0;
 }
