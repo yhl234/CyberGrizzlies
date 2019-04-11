@@ -85,11 +85,7 @@ require 'footer.php';
     
 To Do:
 
-1. Populate drop down list with events by date (includes event name and date) DONE
-
-2. Show attendees for event
-
-3. Order attendees by attendence type (isRemote y/n)
+1. Table is showing duplicate attendees, where is the issue coming from?
 
 
 -->
