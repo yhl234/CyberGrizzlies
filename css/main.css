@@ -240,7 +240,7 @@ select {
   border-bottom: 1px solid #c8c8c847;
   margin-bottom: 14px;
 }
-#user2Id {
+.user2Id {
   outline: none;
   border: none;
   font-weight: 300;
