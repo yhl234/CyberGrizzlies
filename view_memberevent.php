@@ -27,7 +27,7 @@
 	$sql = "SELECT userId, username, firstname, lastname FROM User ORDER BY userId";
 	$users = mysqli_query($conn, $sql);
 	// Start the user select box
-	echo '<select id="userId" name="user2Id" required>';
+	echo '<select id="user2Id" name="user2Id" required>';
 	// Echo out all the users as options
 	while ($user = mysqli_fetch_array($users)) {
 		$id = $user['userId'];
