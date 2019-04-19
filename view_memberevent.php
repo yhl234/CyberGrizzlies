@@ -58,7 +58,8 @@
   <div>
   <label for="endDate">End date:</label>';
   echo '<input type="date" id="endDate" name="endDate" value="' . $_GET['endDate'] . '"/>
-  </div>';
+	</div>
+	</div>';
 
 
 	$sql = "";
