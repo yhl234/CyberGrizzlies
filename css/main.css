@@ -222,6 +222,9 @@ select {
   border-bottom: 1px solid #c8c8c847;
   margin-bottom: 14px;
 }
+#rport {
+  width: 75%;
+}
 #userId {
   outline: none;
   border: none;

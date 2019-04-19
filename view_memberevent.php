@@ -22,7 +22,7 @@
 	}
 
   echo '
-  <div>
+  <div id ="report">
   <label for="userId">User Attending:</label>';
 	$sql = "SELECT userId, username, firstname, lastname FROM User ORDER BY userId";
 	$users = mysqli_query($conn, $sql);
