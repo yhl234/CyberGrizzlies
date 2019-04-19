@@ -12,7 +12,7 @@
 		$sql = "SELECT userId, username, firstName, lastName FROM user ORDER BY userId";
 		$users = mysqli_query($conn, $sql);
 
-		echo '<class= "user2Id" select id="userId" name="userId" required>';
+		echo 'class= "user2Id" <select id="userId" name="userId" required>';
 
 		while ($user = mysqli_fetch_array($users)) {
 			$userId = $user['userId'];
