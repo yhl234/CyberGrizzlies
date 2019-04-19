@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
 body {
   background-image: url(../images/wallpaper.jpg);
   background-repeat: no-repeat;
@@ -48,6 +50,7 @@ nav li {
   padding: 20px;
 }
 nav ul a {
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
   text-decoration: none;
