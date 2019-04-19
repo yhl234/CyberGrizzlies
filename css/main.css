@@ -222,8 +222,9 @@ select {
   border-bottom: 1px solid #c8c8c847;
   margin-bottom: 14px;
 }
-#report {
-  width: 75%;
+.report {
+  width: 50%;
+  margin-left: 28%;
 }
 #userId {
   outline: none;

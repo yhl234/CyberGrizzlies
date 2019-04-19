@@ -22,7 +22,7 @@
 	}
 
   echo '
-  <div id ="report">
+  <div class="report">
   <label for="userId">User Attending:</label>';
 	$sql = "SELECT userId, username, firstname, lastname FROM User ORDER BY userId";
 	$users = mysqli_query($conn, $sql);
@@ -49,16 +49,15 @@
 
   echo 
   '
-  <div>
+  <div class="report">
   <label for="startDate">Start date:</label>';
   echo '<input type="date" id="startDate" name="startDate" value="' . $_GET['startDate'] . '"/>
   </div>';
 
   echo '
-  <div>
+  <div class="report">
   <label for="endDate">End date:</label>';
   echo '<input type="date" id="endDate" name="endDate" value="' . $_GET['endDate'] . '"/>
-	</div>
 	</div>';
 
 
